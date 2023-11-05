@@ -1,0 +1,155 @@
+@import '../../../../../assets/scss/_variables.scss';
+
+.searching-item {
+  &-content {
+    padding: 25px 20px;
+    &-image ::ng-deep {
+      .ant-skeleton-button {
+        width: 100%;
+        height: 132px;
+      }
+      img {
+        max-height: 149px;
+      }
+    }
+    &-model {
+      font-size: 16px;
+      line-height: 22px;
+      color: $color_black_gray;
+      ::ng-deep {
+        .ant-skeleton-button {
+          width: 100px;
+          height: 19px;
+        }
+      }
+    }
+    &-name {
+      font-size: 20px;
+      line-height: 27px;
+      color: $color_black;
+      margin: 2px 0 5px;
+      min-height: 56px;
+      ::ng-deep {
+        .ant-skeleton-button {
+          width: 100px;
+          height: 27px;
+        }
+      }
+    }
+    &-exist {
+      font-size: 14px;
+      line-height: 19px;
+      color: $color_semi_black;
+      margin-bottom: 6px;
+      ::ng-deep {
+        .ant-skeleton-button {
+          width: 100px;
+          height: 19px;
+        }
+      }
+    }
+    &-pricing {
+      font-size: 16px;
+      line-height: 23px;
+      color: $color_black_gray;
+      ::ng-deep {
+        .ant-skeleton-button {
+          width: 170px;
+          height: 22px;
+        }
+      }
+      &-detail {
+        color: $color_blue;
+      }
+      &-method {
+        margin-top: 7px;
+        ::ng-deep {
+          .ant-skeleton-button {
+            width: 170px;
+            height: 22px;
+          }
+        }
+        div {
+          display: inline-block;
+          padding: 4px 21px;
+          background: #F6F6F6;
+          border-radius: 21px;
+        }
+        span {
+          display: inline-block;
+          vertical-align: top;
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    &-color {
+      margin: 15px 0;
+      ::ng-deep {
+        .ant-skeleton-button {
+          width: 130px;
+          height: 24px;
+        }
+      }
+      &-exterior {
+        width: 100%;
+        &-preview {
+          width: 16px;
+          height: 16px;
+          background: $color_quite_red;
+          box-sizing: border-box;
+          border-radius: 50%;
+          position: absolute;
+          top: 4px;
+        }
+        &-name {
+          font-size: 14px;
+          line-height: 23px;
+          color: $color_semi_black;
+          padding-top: 1px;
+          padding-left: 25px;
+        }
+        &:first-child {
+          position: relative;
+          padding-right: 10px;
+          border-right: 1px solid #F2F3F4;
+        }
+        &:last-child {
+          position: relative;
+          width: 81%;
+          padding-left: 14px;
+          .searching-item-content-color-exterior-preview {
+            background: #F5F5F5;
+            border: 1px solid #E5E5E5;
+          }
+        }
+      }
+    }
+    &-code {
+      &-vin {
+        font-size: 13px;
+        line-height: 16px;
+        color: $color_black_gray;
+        margin: 5px 0;
+        ::ng-deep {
+          .ant-skeleton-button {
+            width: 160px;
+            height: 16px;
+          }
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        p {
+          &:first-child {
+            margin-right: 7px;
+          }
+        }
+      }
+    }
+  }
+}

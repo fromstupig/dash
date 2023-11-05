@@ -1,0 +1,3877 @@
+definitions:
+  Address:
+    properties:
+      city:
+        $ref: '#/definitions/City'
+      city_id:
+        format: int32
+        type: integer
+      country:
+        $ref: '#/definitions/Country'
+      country_id:
+        format: int32
+        type: integer
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      raw:
+        type: string
+      state:
+        $ref: '#/definitions/State'
+      state_id:
+        format: int32
+        type: integer
+      zip_code:
+        format: int32
+        type: integer
+    type: object
+  City:
+    properties:
+      country:
+        $ref: '#/definitions/Country'
+      country_id:
+        format: int32
+        type: integer
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      lat:
+        format: float
+        type: number
+      long:
+        format: float
+        type: number
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      state:
+        $ref: '#/definitions/State'
+      state_id:
+        format: int32
+        type: integer
+    type: object
+  Country:
+    properties:
+      code:
+        type: string
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+    type: object
+  DealerRequest:
+    properties:
+      address:
+        items:
+          $ref: '#/definitions/Address'
+        type: array
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      credit_information:
+        type: object
+      dealer_id:
+        format: int32
+        type: integer
+        x-nullable: true
+      dealer_option:
+        type: object
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      pricing_detail:
+        type: object
+      requester_email:
+        type: string
+      requester_phone_number:
+        type: string
+      status:
+        enum:
+        - PENDING
+        - PROCESSING
+        - COMPLETED
+        type: string
+      user:
+        $ref: '#/definitions/User'
+      user_id:
+        format: int32
+        type: integer
+      vehicle:
+        $ref: '#/definitions/VehicleSchema'
+      vehicle_id:
+        format: int32
+        type: integer
+    required:
+    - vehicle_id
+    type: object
+  DealerSchedulerSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      dealer_id:
+        format: int32
+        type: integer
+        x-nullable: true
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      schedule_note:
+        type: string
+      schedule_time:
+        format: date-time
+        type: string
+      schedule_title:
+        type: string
+      user:
+        $ref: '#/definitions/User'
+      user_id:
+        format: int32
+        type: integer
+      vehicle:
+        $ref: '#/definitions/VehicleSchema'
+      vehicle_id:
+        format: int32
+        type: integer
+    type: object
+  DealerSchema:
+    properties:
+      address:
+        items:
+          $ref: '#/definitions/Address'
+        type: array
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      lat:
+        format: float
+        type: number
+      long:
+        format: float
+        type: number
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      website:
+        type: string
+    required:
+    - name
+    type: object
+  ExceptionResponseSchema:
+    properties:
+      code:
+        format: int32
+        type: integer
+      detail:
+        type: string
+      error:
+        type: string
+      success:
+        type: boolean
+    type: object
+  PriceOptionAssignmentSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      end_date:
+        format: date-time
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      region_id:
+        format: int32
+        type: integer
+      start_date:
+        format: date-time
+        type: string
+      value_in_cent:
+        format: int32
+        type: integer
+      vehicle_option_item_id:
+        format: int32
+        type: integer
+    type: object
+  PriceVehicleAssignmentSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      end_date:
+        format: date-time
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      region_id:
+        format: int32
+        type: integer
+      start_date:
+        format: date-time
+        type: string
+      value_in_cent:
+        format: int32
+        type: integer
+      vehicle_id:
+        format: int32
+        type: integer
+    type: object
+  PriceVehicleModelStyleAssignmentSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      end_date:
+        format: date-time
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      region_id:
+        format: int32
+        type: integer
+      start_date:
+        format: date-time
+        type: string
+      value_in_cent:
+        format: int32
+        type: integer
+      vehicle_model_style_id:
+        format: int32
+        type: integer
+    type: object
+  Region:
+    properties:
+      code:
+        type: string
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+    type: object
+  State:
+    properties:
+      code:
+        type: string
+      country:
+        $ref: '#/definitions/Country'
+      country_id:
+        format: int32
+        type: integer
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      region:
+        $ref: '#/definitions/Region'
+      region_id:
+        format: int32
+        type: integer
+    type: object
+  User:
+    properties:
+      address:
+        type: string
+      avatar_url:
+        type: string
+      email:
+        format: email
+        type: string
+      facebook_id:
+        type: string
+      firstName:
+        type: string
+      google_id:
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      lastName:
+        type: string
+      password:
+        type: string
+      phone_number:
+        type: string
+      title:
+        type: string
+      type:
+        enum:
+        - HOST
+        - TENANT
+        - EXTERNAL
+        type: string
+    required:
+    - email
+    - firstName
+    - lastName
+    type: object
+  VehicleAttributeSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      parent:
+        allOf:
+        - $ref: '#/definitions/VehicleAttributeSchema'
+        readOnly: true
+      parent_id:
+        format: int32
+        type: integer
+    required:
+    - description
+    - name
+    type: object
+  VehicleAttributeValueSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      value:
+        type: string
+      value_in_number:
+        format: float
+        type: number
+      vehicle_attribute:
+        allOf:
+        - $ref: '#/definitions/VehicleAttributeSchema'
+        readOnly: true
+      vehicle_attribute_id:
+        format: int32
+        type: integer
+    required:
+    - value
+    type: object
+  VehicleBody:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  VehicleBrand:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  VehicleBrandSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  VehicleCategory:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  VehicleCustomAttributeSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      vehicle_attribute_value_id:
+        format: int32
+        type: integer
+      vehicle_id:
+        format: int32
+        type: integer
+    type: object
+  VehicleCustomOptionSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      vehicle_id:
+        format: int32
+        type: integer
+      vehicle_option_item_id:
+        format: int32
+        type: integer
+    type: object
+  VehicleDriveTrain:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  VehicleEngine:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      horse_power:
+        format: int32
+        type: integer
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      label:
+        type: string
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      torque:
+        format: int32
+        type: integer
+      type:
+        enum:
+        - OTHERS
+        - GAS
+        - DIESEL
+        - ELECTRIC
+        type: string
+    required:
+    - type
+    type: object
+  VehicleGalleryItemSchema:
+    properties:
+      asset_path:
+        type: string
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      order:
+        format: int32
+        type: integer
+      type:
+        enum:
+        - COVER
+        - INTERIOR
+        - INTERIOR_COLOR
+        - EXTERIOR
+        - EXTERIOR_COLOR
+        - BRAND_LOGO
+        - MODEL_AVATAR
+        - YEAR_MODEL_AVATAR
+        - VIDEO_INTRODUCTION
+        - MODEL_STYLE_AVATAR
+        - OPTION_ITEM_AVATAR
+        - VEHICLE_AVATAR
+        - OTHERS
+        type: string
+    required:
+    - asset_path
+    - type
+    type: object
+  VehicleHistorySchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      owner:
+        $ref: '#/definitions/User'
+      owner_id:
+        format: int32
+        type: integer
+      purchased_date:
+        format: date-time
+        type: string
+      statuses:
+        items:
+          $ref: '#/definitions/VehicleStatusSchema'
+        type: array
+      vehicle_id:
+        format: int32
+        type: integer
+    required:
+    - purchased_date
+    type: object
+  VehicleInfo:
+    properties:
+      city_mpg:
+        format: int32
+        type: integer
+      combined_mpg:
+        format: int32
+        type: integer
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      doors:
+        format: int32
+        type: integer
+      highway_mpg:
+        format: int32
+        type: integer
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      safety_rate:
+        format: int32
+        type: integer
+      seats:
+        format: int32
+        type: integer
+      vehicle_warranty:
+        $ref: '#/definitions/VehicleWarranty'
+    type: object
+  VehicleModel:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+      vehicle_brand:
+        allOf:
+        - $ref: '#/definitions/VehicleBrand'
+        readOnly: true
+    required:
+    - description
+    - name
+    type: object
+  VehicleModel1:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+    required:
+    - description
+    - name
+    type: object
+  VehicleModelSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      vehicle_brand:
+        allOf:
+        - $ref: '#/definitions/VehicleBrand'
+        readOnly: true
+      vehicle_brand_id:
+        format: int32
+        type: integer
+    required:
+    - description
+    - name
+    type: object
+  VehicleModelStyle:
+    properties:
+      base_MSRP:
+        format: float
+        type: number
+      body:
+        allOf:
+        - $ref: '#/definitions/VehicleBody'
+        readOnly: true
+      body_id:
+        format: int32
+        type: integer
+      consumer_info:
+        type: object
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      current_price_assigment:
+        items:
+          $ref: '#/definitions/PriceVehicleModelStyleAssignmentSchema'
+        type: array
+      description:
+        type: string
+      drive_trains:
+        items:
+          $ref: '#/definitions/VehicleDriveTrain'
+        type: array
+      engines:
+        items:
+          $ref: '#/definitions/VehicleEngine'
+        type: array
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      image_url:
+        type: string
+      include_feature_description:
+        type: string
+      infos:
+        items:
+          $ref: '#/definitions/VehicleInfo'
+        type: array
+      manufacture_code:
+        type: string
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      options:
+        items:
+          $ref: '#/definitions/VehicleOptionItem'
+        type: array
+      pricing_options:
+        type: object
+      standard_feature:
+        type: object
+      style_features:
+        items:
+          type: string
+        type: array
+      technical_feature:
+        type: object
+      transmissions:
+        items:
+          $ref: '#/definitions/VehicleTransmission'
+        type: array
+      vehicle_year_model:
+        allOf:
+        - $ref: '#/definitions/VehicleYearModel'
+        readOnly: true
+      vehicle_year_model_id:
+        format: int32
+        type: integer
+      vif_num:
+        format: int32
+        readOnly: true
+        type: integer
+    required:
+    - description
+    - name
+    type: object
+  VehicleModelStyleAttributeSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      vehicle_attribute_value:
+        $ref: '#/definitions/VehicleAttributeValueSchema'
+      vehicle_attribute_value_id:
+        format: int32
+        type: integer
+      vehicle_model_style_id:
+        format: int32
+        type: integer
+    type: object
+  VehicleModelStyleSchema:
+    properties:
+      base_MSRP:
+        format: float
+        type: number
+      body:
+        allOf:
+        - $ref: '#/definitions/VehicleBody'
+        readOnly: true
+      body_id:
+        format: int32
+        type: integer
+      consumer_info:
+        type: object
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      current_price_assigment:
+        items:
+          $ref: '#/definitions/PriceVehicleModelStyleAssignmentSchema'
+        type: array
+      description:
+        type: string
+      drive_trains:
+        items:
+          $ref: '#/definitions/VehicleDriveTrain'
+        type: array
+      engines:
+        items:
+          $ref: '#/definitions/VehicleEngine'
+        type: array
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      image_url:
+        type: string
+      include_feature_description:
+        type: string
+      infos:
+        items:
+          $ref: '#/definitions/VehicleInfo'
+        type: array
+      manufacture_code:
+        type: string
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      options:
+        items:
+          $ref: '#/definitions/VehicleOptionItem'
+        type: array
+      pricing_options:
+        type: object
+      standard_feature:
+        type: object
+      style_features:
+        items:
+          type: string
+        type: array
+      technical_feature:
+        type: object
+      transmissions:
+        items:
+          $ref: '#/definitions/VehicleTransmission'
+        type: array
+      vehicle_year_model:
+        allOf:
+        - $ref: '#/definitions/VehicleYearModel'
+        readOnly: true
+      vehicle_year_model_id:
+        format: int32
+        type: integer
+      vif_num:
+        format: int32
+        readOnly: true
+        type: integer
+    required:
+    - description
+    - name
+    type: object
+  VehicleModelStylesSearchSchema:
+    properties:
+      filter_body_id:
+        format: int32
+        type: integer
+      filter_brand_id:
+        format: int32
+        type: integer
+      filter_limit:
+        format: int32
+        type: integer
+      filter_model_id:
+        format: int32
+        type: integer
+      filter_model_style_color_code:
+        type: string
+      filter_model_style_id:
+        format: int32
+        type: integer
+      filter_offset:
+        format: int32
+        type: integer
+      filter_price_from:
+        format: float
+        type: number
+      filter_price_to:
+        format: float
+        type: number
+      filter_search:
+        type: string
+      filter_year_model_id:
+        format: int32
+        type: integer
+    required:
+    - filter_limit
+    - filter_offset
+    type: object
+  VehicleOptionItem:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      current_price_assigment:
+        items:
+          $ref: '#/definitions/PriceOptionAssignmentSchema'
+        type: array
+      description:
+        type: string
+      detail:
+        type: object
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_popular:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      type:
+        enum:
+        - INTERIOR_COLOR
+        - EXTERIOR_COLOR
+        - PACKAGE
+        - OPTION
+        - OTHERS
+        type: string
+    required:
+    - description
+    - type
+    type: object
+  VehicleOptionItemSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      current_price_assigment:
+        items:
+          $ref: '#/definitions/PriceOptionAssignmentSchema'
+        type: array
+      description:
+        type: string
+      detail:
+        type: object
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_popular:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      type:
+        enum:
+        - INTERIOR_COLOR
+        - EXTERIOR_COLOR
+        - PACKAGE
+        - OPTION
+        - OTHERS
+        type: string
+    required:
+    - description
+    - type
+    type: object
+  VehicleSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      current_owner:
+        $ref: '#/definitions/User'
+      current_owner_id:
+        format: int32
+        type: integer
+      current_price_assigment:
+        $ref: '#/definitions/PriceVehicleAssignmentSchema'
+      custom_options:
+        items:
+          $ref: '#/definitions/VehicleOptionItem'
+        type: array
+      description:
+        type: string
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      vehicle_brand:
+        allOf:
+        - $ref: '#/definitions/VehicleBrand'
+        readOnly: true
+      vehicle_brand_id:
+        format: int32
+        type: integer
+      vehicle_model:
+        allOf:
+        - $ref: '#/definitions/VehicleModel1'
+        readOnly: true
+      vehicle_model_id:
+        format: int32
+        type: integer
+      vehicle_model_style:
+        allOf:
+        - $ref: '#/definitions/VehicleModelStyle'
+        readOnly: true
+      vehicle_model_style_id:
+        format: int32
+        type: integer
+    required:
+    - description
+    - name
+    type: object
+  VehicleStatusSchema:
+    properties:
+      checked_date:
+        format: date-time
+        type: string
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      mileage:
+        format: float
+        type: number
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      note:
+        type: string
+      vehicle_history_id:
+        format: int32
+        type: integer
+    required:
+    - checked_date
+    type: object
+  VehicleTransmission:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      label:
+        type: string
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      speeds:
+        format: int32
+        type: integer
+      type:
+        enum:
+        - OTHERS
+        - AUTOMATIC
+        - MANUAL
+        type: string
+    required:
+    - type
+    type: object
+  VehicleWarranty:
+    properties:
+      anti_corrosion:
+        type: string
+      comprehensive:
+        type: string
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      is_active:
+        type: boolean
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      paint:
+        type: string
+      power_train:
+        type: string
+      roadside_assistance:
+        type: string
+    type: object
+  VehicleYearModel:
+    properties:
+      description:
+        type: string
+      name:
+        type: string
+      vehicle_model:
+        allOf:
+        - $ref: '#/definitions/VehicleModel'
+        readOnly: true
+    required:
+    - description
+    - name
+    type: object
+  VehicleYearModelAttributeSchema:
+    properties:
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      vehicle_attribute_value:
+        $ref: '#/definitions/VehicleAttributeValueSchema'
+      vehicle_attribute_value_id:
+        format: int32
+        type: integer
+      vehicle_year_model_id:
+        format: int32
+        type: integer
+    type: object
+  VehicleYearModelSchema:
+    properties:
+      attributes:
+        items:
+          $ref: '#/definitions/VehicleAttributeValueSchema'
+        readOnly: true
+        type: array
+      categories:
+        items:
+          $ref: '#/definitions/VehicleCategory'
+        type: array
+      creation_date:
+        format: date-time
+        readOnly: true
+        type: string
+      description:
+        type: string
+      drive_trains:
+        items:
+          $ref: '#/definitions/VehicleDriveTrain'
+        type: array
+      engines:
+        items:
+          $ref: '#/definitions/VehicleEngine'
+        type: array
+      galleries:
+        items:
+          $ref: '#/definitions/VehicleGalleryItemSchema'
+        type: array
+      id:
+        format: int32
+        type: integer
+        x-nullable: true
+      infos:
+        items:
+          $ref: '#/definitions/VehicleInfo'
+        type: array
+      modification_date:
+        format: date-time
+        readOnly: true
+        type: string
+      name:
+        type: string
+      transmissions:
+        items:
+          $ref: '#/definitions/VehicleTransmission'
+        type: array
+      vehicle_model:
+        allOf:
+        - $ref: '#/definitions/VehicleModel'
+        readOnly: true
+      vehicle_model_id:
+        format: int32
+        type: integer
+      year:
+        format: int32
+        type: integer
+    required:
+    - description
+    - name
+    type: object
+info:
+  title: Swagger Petstore
+  version: 1.0.0
+paths:
+  /cities:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: CitySchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /cities/{state_id}:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: CitySchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: state_id
+      in: path
+      name: state_id
+      required: true
+  /countries:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: CountrySchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /dealer_requests:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerRequestSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: DealerBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/DealerRequest'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerRequestSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /dealer_requests/{dealer_request_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerRequestSchema
+        '400': &id001
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id002
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id003
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerRequestSchema
+        '400': *id001
+        '401': *id002
+        5XX: *id003
+    parameters:
+    - description: DealerRequestId
+      in: path
+      name: dealer_request_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: DealerRequestBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/DealerRequest'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerRequestSchema
+        '400': *id001
+        '401': *id002
+        5XX: *id003
+  /dealer_schedulers:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchedulerSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: DealerBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/DealerSchedulerSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchedulerSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /dealer_schedulers/{dealer_scheduler_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchedulerSchema
+        '400': &id004
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id005
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id006
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchedulerSchema
+        '400': *id004
+        '401': *id005
+        5XX: *id006
+    parameters:
+    - description: DealerSchedulerId
+      in: path
+      name: dealer_scheduler_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: DealerSchedulerBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/DealerSchedulerSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchedulerSchema
+        '400': *id004
+        '401': *id005
+        5XX: *id006
+  /dealer_schedulers/{dealer_scheduler_id}/month/{month_num}:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchedulerSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: DealerSchedulerId
+      in: path
+      name: dealer_scheduler_id
+      required: true
+    - description: Number Of Month
+      in: path
+      name: month_num
+      required: true
+  /dealers:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: DealerBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/DealerSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /dealers/{dealer_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchema
+        '400': &id007
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id008
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id009
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchema
+        '400': *id007
+        '401': *id008
+        5XX: *id009
+    parameters:
+    - description: DealerId
+      in: path
+      name: dealer_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: DealerBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/DealerSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: DealerSchema
+        '400': *id007
+        '401': *id008
+        5XX: *id009
+  /states:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: StateSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /states/{country_id}:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: StateSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: country_id
+      in: path
+      name: country_id
+      required: true
+  /vehicle_attributes:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleAttributeSchema
+        '400': &id010
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id011
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id012
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: VehicleAttributeBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleAttributeSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleAttributeSchema
+        '400': *id010
+        '401': *id011
+        5XX: *id012
+  /vehicle_attributes/{vehicle_attribute_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleAttributeSchema
+        '400': &id013
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id014
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id015
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleAttributeSchema
+        '400': *id013
+        '401': *id014
+        5XX: *id015
+    parameters:
+    - description: VehicleAttributeId
+      in: path
+      name: vehicle_attribute_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: VehicleAttributeBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleAttributeSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleAttributeSchema
+        '400': *id013
+        '401': *id014
+        5XX: *id015
+  /vehicle_brands:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBrandSchema
+        '400': &id016
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id017
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id018
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: VehicleBrandBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleBrandSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBrandSchema
+        '400': *id016
+        '401': *id017
+        5XX: *id018
+  /vehicle_brands/{vehicle_brand_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBrandSchema
+        '400': &id019
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id020
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id021
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBrandSchema
+        '400': *id019
+        '401': *id020
+        5XX: *id021
+    parameters:
+    - description: VehicleBrandId
+      in: path
+      name: vehicle_brand_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: VehicleBrandBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleBrandSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBrandSchema
+        '400': *id019
+        '401': *id020
+        5XX: *id021
+  /vehicle_brands/{vehicle_brand_id}/logo:
+    post:
+      parameters:
+      - description: VehicleBrandId
+        in: path
+        name: vehicle_brand_id
+        required: true
+      - description: VehicleBrandLogo
+        in: formData
+        name: VehicleBrandLogo
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBrandSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_brands/{vehicle_brand_id}/vehicle_models:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: VehicleBrandId
+      in: path
+      name: vehicle_brand_id
+      required: true
+  /vehicle_model_styles:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400': &id022
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id023
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id024
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: VehicleModelStyleBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleModelStyleSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400': *id022
+        '401': *id023
+        5XX: *id024
+  /vehicle_model_styles/_search:
+    get:
+      parameters:
+      - in: query
+        name: filter_search
+        required: false
+        type: string
+      - format: int32
+        in: query
+        name: filter_offset
+        required: true
+        type: integer
+      - format: int32
+        in: query
+        name: filter_limit
+        required: true
+        type: integer
+      - format: float
+        in: query
+        name: filter_price_to
+        required: false
+        type: number
+      - format: int32
+        in: query
+        name: filter_model_id
+        required: false
+        type: integer
+      - in: query
+        name: filter_model_style_color_code
+        required: false
+        type: string
+      - format: int32
+        in: query
+        name: filter_brand_id
+        required: false
+        type: integer
+      - format: int32
+        in: query
+        name: filter_year_model_id
+        required: false
+        type: integer
+      - format: int32
+        in: query
+        name: filter_body_id
+        required: false
+        type: integer
+      - format: int32
+        in: query
+        name: filter_model_style_id
+        required: false
+        type: integer
+      - format: float
+        in: query
+        name: filter_price_from
+        required: false
+        type: number
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_model_styles/{vehicle_model_style_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400': &id025
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id026
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id027
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400': *id025
+        '401': *id026
+        5XX: *id027
+    parameters:
+    - description: vehicleModelStyleId
+      in: path
+      name: vehicle_model_style_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: VehicleModelStyleBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleModelStyleSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400': *id025
+        '401': *id026
+        5XX: *id027
+  /vehicle_model_styles/{vehicle_model_style_id}/attribute_values:
+    post:
+      parameters:
+      - description: VehicleModelStyleId
+        in: path
+        name: vehicle_model_style_id
+        required: true
+      - in: body
+        name: VehicleAttributeValuesBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleAttributeValueSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_model_styles/{vehicle_model_style_id}/avatar:
+    post:
+      parameters:
+      - description: VehicleModelStyleId
+        in: path
+        name: vehicle_model_style_id
+        required: true
+      - description: VehicleModelStyleAvatar
+        in: formData
+        name: VehicleModelStyleAvatar
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_model_styles/{vehicle_model_style_id}/cover:
+    post:
+      parameters:
+      - description: VehicleModelStyleId
+        in: path
+        name: vehicle_model_style_id
+        required: true
+      - description: VehicleModelStyleCover
+        in: formData
+        name: VehicleModelStyleCover
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_model_styles/{vehicle_model_style_id}/introduction_video:
+    post:
+      parameters:
+      - description: VehicleModelStyleId
+        in: path
+        name: vehicle_model_style_id
+        required: true
+      - description: VehicleModelStyleIntroductionVideo
+        in: formData
+        name: VehicleModelStyleIntroductionVideo
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_models:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400': &id028
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id029
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id030
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: VehicleModelBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleModelSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400': *id028
+        '401': *id029
+        5XX: *id030
+  /vehicle_models/{vehicle_model_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400': &id031
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id032
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id033
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400': *id031
+        '401': *id032
+        5XX: *id033
+    parameters:
+    - description: vehicleModelId
+      in: path
+      name: vehicle_model_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: VehicleModelBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleModelSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400': *id031
+        '401': *id032
+        5XX: *id033
+  /vehicle_models/{vehicle_model_id}/avatar:
+    post:
+      parameters:
+      - description: VehicleModelId
+        in: path
+        name: vehicle_model_id
+        required: true
+      - description: VehicleModelAvatar
+        in: formData
+        name: VehicleModelAvatar
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_models/{vehicle_model_id}/vehicle_year_models:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: vehicleModelId
+      in: path
+      name: vehicle_model_id
+      required: true
+  /vehicle_option_items/{vehicle_option_item_id}/avatar:
+    post:
+      parameters:
+      - description: vehicle_option_item_id
+        in: path
+        name: vehicle_option_item_id
+        required: true
+      - description: VehicleOptionItemAvatar
+        in: formData
+        name: VehicleOptionItemAvatar
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleOptionItemSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400': &id034
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id035
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id036
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    post:
+      parameters:
+      - in: body
+        name: VehicleYearModelBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleYearModelSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400': *id034
+        '401': *id035
+        5XX: *id036
+  /vehicle_year_models/{vehicle_year_model_id}:
+    delete:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400': &id037
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401': &id038
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX: &id039
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400': *id037
+        '401': *id038
+        5XX: *id039
+    parameters:
+    - description: vehicleYearModelId
+      in: path
+      name: vehicle_year_model_id
+      required: true
+    put:
+      parameters:
+      - in: body
+        name: VehicleYearModelBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleYearModelSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400': *id037
+        '401': *id038
+        5XX: *id039
+  /vehicle_year_models/{vehicle_year_model_id}/attribute_values:
+    post:
+      parameters:
+      - description: VehicleYearModelId
+        in: path
+        name: vehicle_year_model_id
+        required: true
+      - in: body
+        name: VehicleAttributeValuesBody
+        required: 'true'
+        schema:
+          $ref: '#/definitions/VehicleAttributeValueSchema'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models/{vehicle_year_model_id}/avatar:
+    post:
+      parameters:
+      - description: VehicleYearModelId
+        in: path
+        name: vehicle_year_model_id
+        required: true
+      - description: VehicleYearModelAvatar
+        in: formData
+        name: VehicleYearModelAvatar
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models/{vehicle_year_model_id}/cover:
+    post:
+      parameters:
+      - description: VehicleYearModelId
+        in: path
+        name: vehicle_year_model_id
+        required: true
+      - description: VehicleYearModelCover
+        in: formData
+        name: VehicleYearModelCover
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models/{vehicle_year_model_id}/exterior:
+    post:
+      parameters:
+      - description: VehicleYearModelId
+        in: path
+        name: vehicle_year_model_id
+        required: true
+      - description: VehicleYearModelExterior
+        in: formData
+        name: VehicleYearModelExterior
+        required: 'true'
+        type: file
+      - description: VehicleYearModelExterior2
+        in: formData
+        name: VehicleYearModelExterior2
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models/{vehicle_year_model_id}/interior:
+    post:
+      parameters:
+      - description: VehicleYearModelId
+        in: path
+        name: vehicle_year_model_id
+        required: true
+      - description: VehicleYearModelInterior
+        in: formData
+        name: VehicleYearModelInterior
+        required: 'true'
+        type: file
+      - description: VehicleYearModelInterior2
+        in: formData
+        name: VehicleYearModelInterior2
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models/{vehicle_year_model_id}/introduction_video:
+    post:
+      parameters:
+      - description: VehicleYearModelId
+        in: path
+        name: vehicle_year_model_id
+        required: true
+      - description: VehicleYearModelIntroductionVideo
+        in: formData
+        name: VehicleYearModelIntroductionVideo
+        required: 'true'
+        type: file
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleYearModelSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicle_year_models/{vehicle_year_model_id}/vehicle_model_styles:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleModelStyleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: vehicleYearModelId
+      in: path
+      name: vehicle_year_model_id
+      required: true
+  /vehicles/_search:
+    get:
+      parameters:
+      - in: query
+        name: filter_search
+        required: false
+        type: string
+      - format: int32
+        in: query
+        name: filter_offset
+        required: true
+        type: integer
+      - format: int32
+        in: query
+        name: filter_limit
+        required: true
+        type: integer
+      - format: float
+        in: query
+        name: filter_price_to
+        required: false
+        type: number
+      - format: int32
+        in: query
+        name: filter_model_id
+        required: false
+        type: integer
+      - in: query
+        name: filter_model_style_color_code
+        required: false
+        type: string
+      - format: int32
+        in: query
+        name: filter_brand_id
+        required: false
+        type: integer
+      - format: int32
+        in: query
+        name: filter_year_model_id
+        required: false
+        type: integer
+      - format: int32
+        in: query
+        name: filter_body_id
+        required: false
+        type: integer
+      - format: int32
+        in: query
+        name: filter_model_style_id
+        required: false
+        type: integer
+      - format: float
+        in: query
+        name: filter_price_from
+        required: false
+        type: number
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicles/{vehicle_id}:
+    get:
+      parameters:
+      - description: VehicleId
+        in: path
+        name: vehicle_id
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicles_features/bodies:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleBodySchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicles_features/drive_trains:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleDriveTrainSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicles_features/engines:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleEngineSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /vehicles_features/transmissions:
+    get:
+      parameters:
+      - in: query
+        name: direction
+        required: 'true'
+        schema:
+          default: asc
+          enum:
+          - asc
+          - desc
+          type: string
+      - in: query
+        name: is_active
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      - in: query
+        name: limit
+        required: 'true'
+        schema:
+          default: '100'
+          type: integer
+      - in: query
+        name: offset
+        required: 'true'
+        schema:
+          default: '0'
+          type: integer
+      - default: ''
+        in: query
+        name: q
+        required: 'true'
+        schema:
+          type: string
+      - in: query
+        name: sort
+        required: 'true'
+        schema:
+          default: 'true'
+          type: boolean
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: VehicleTransmissionSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+  /zip_codes/{zip_code}:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: ZipCodeSchema
+        '400':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Bad Requests
+        '401':
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Not Authorized
+        5XX:
+          content:
+            application/json:
+              schema: ExceptionResponseSchema
+          description: Error From Server
+    parameters:
+    - description: zip_code
+      in: path
+      name: zip_code
+      required: true
+swagger: 2.0.0

@@ -1,0 +1,30 @@
+<div class="filter" *ngIf="filters && filters.length">
+  <div class="container">
+    <div class="flex items-center justify-between">
+      <div>
+        <div class="flex-wrap flex items-center cursor-pointer">
+          <div class="filter-item m-1 flex items-center" *ngFor="let filter of filters;">
+            <div class="filter-item-title font-semibold">{{ filter?.text }}</div>
+            <div class="filter-item-remove" (click)="removeFilter(filter)"><i nz-icon nzType="close" nzTheme="outline"></i></div>
+          </div>
+          <div class="filter-clear font-semibold" (click)="removeAllFilter()">Clear all</div>
+        </div>
+      </div>
+      <div class="filter-share-roll">
+        <div
+          class="filter-share flex items-center justify-center"
+          [nzTooltipTitle]="copy"
+          nzTooltipPlacement="topLeft"
+          nz-tooltip
+          nzTooltipTrigger="click"
+          [nzTooltipMouseLeaveDelay]="1"
+          (click)="handleCopyLink()"
+        >
+          <i nz-icon nzType="share-alt" nzTheme="outline"></i>
+          <span>Share</span>
+        </div>
+        <ng-template #copy><span class="filter-share-success">Link has been copied</span> </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

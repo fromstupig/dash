@@ -1,0 +1,177 @@
+<main class="home-page">
+  <header class="header grid md:grid-cols-12 content-center" [ngStyle]="{'min-height': heightScreen}">
+    <div class="header-item-left md:col-span-6">
+      <p class="desc mb-5 md:mb-3 text-center md:text-left">The easiest way to find your car</p>
+      <h2 class="title text-center md:text-left mb-32 md:mb-0">Get your dream car with a few clicks and taps</h2>
+      <button routerLink="/searching" class="btn btn-dealer md:mt-4 mx-auto" type="button">SHOP YOUR DREAM CAR</button>
+      <button routerLink="/searching" class="btn btn-dealer transparent mt-3 md:ml-2 md:mt-4 mx-auto" type="button">GET PRE-QUALIFIED</button>
+    </div>
+    <div class="header-item-right md:col-span-6 flex content-center justify-center md:justify-end mt-5 md:mt-0">
+      <div class="button-play flex flex-wrap content-center justify-end">
+        <p class="content justify-self-center self-center mr-4">Play video</p>
+        <img class="image" src="/assets/images/home-page/button-play.svg" alt="button-play"/>
+      </div>
+    </div>
+    <div class="header-scroll-up md:col-span-12">
+      <p class="text-center">Scroll up to learn more</p>
+      <img class="mt-2 mx-auto" src="/assets/images/home-page/icon-scroll-up.svg" alt="scroll-up"/>
+    </div>
+  </header>
+
+  <section class="container-list-card">
+    <div class="container list-card grid grid-cols-12">
+      <article class="col-span-12 md:col-span-4 mx-auto item-one">
+        <h3 class="mb-3 text-center">Express Checkout</h3>
+        <p class="text-center">Review all the numbers and finalize everything without needing to visit our dealership</p>
+      </article>
+      <article class="col-span-12 md:col-span-4 mx-auto item-two">
+        <h3 class="mb-3 text-center">Express Checkout</h3>
+        <p class="text-center">Review all the numbers and finalize everything without needing to visit our dealership</p>
+      </article>
+      <article class="col-span-12 md:col-span-4 mx-auto item-three">
+        <h3 class="mb-3 text-center">Express Checkout</h3>
+        <p class="text-center">Review all the numbers and finalize everything without needing to visit our dealership</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container-model-cars mt-12 md:mt-56">
+    <div class="container grid grid-cols-12">
+      <article class="item-model-cars-left col-span-12 md:col-span-3 content-center self-center">
+        <h3 class="title mb-3 md:mb-3 text-center md:text-left">Models that people love</h3>
+        <p class="content text-center md:text-left">We help you buy your new car as easy as buying an iPhone</p>
+        <button class="btn btn-dealer md:mt-6 mx-auto" type="button" (click)="openModalBuild()">BUILD YOUR OWN CAR</button>
+      </article>
+      <article class="item-modal-cars-right col-span-12 md:col-span-9 mt-8 md:mt-0" *ngIf="gallery.length">
+        <div class="wrap-model-cars flex justify-center mb-4 md:mb-8">
+          <div class="model-car dealer-box-shadow mr-2" *ngFor="let item of gallery.slice(0, 2)" (click)="goToSearchPage(item)">
+            <img [src]="item.galleries[0]['asset_path']" alt="car-1"/>
+            <p class="content text-center">{{item.description}}</p>
+          </div>
+        </div>
+        <div class="wrap-model-cars flex justify-center mb-4 md:mb-8">
+          <div class="model-car dealer-box-shadow mr-2" [ngClass]="{'car-hidden-mobile': idx === 1}"
+               *ngFor="let item of gallery.slice(2, 5); let idx = index" (click)="goToSearchPage(item)">
+            <img [src]="item.galleries[0]['asset_path']" alt="car-1"/>
+            <p class="content text-center">{{item.description}}</p>
+          </div>
+        </div>
+        <div class="wrap-model-cars flex justify-center mb-4 md:mb-8">
+          <div class="model-car dealer-box-shadow mr-2" *ngFor="let item of gallery.slice(5, 7)" (click)="goToSearchPage(item)">
+            <img [src]="item.galleries[0]['asset_path']" alt="car-1"/>
+            <p class="content text-center">{{item.description}}</p>
+          </div>
+        </div>
+      </article>
+      <article class="item-modal-cars-right col-span-12 md:col-span-9 mt-8 md:mt-0" *ngIf="!gallery.length">
+        <div class="wrap-model-cars flex justify-center mb-4 md:mb-8">
+          <div class="model-car dealer-box-shadow mr-2">
+              <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+              <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+          <div class="model-car dealer-box-shadow mr-2">
+            <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+            <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+        </div>
+        <div class="wrap-model-cars flex justify-center mb-4 md:mb-8">
+          <div class="model-car dealer-box-shadow mr-2">
+            <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+            <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+          <div class="model-car dealer-box-shadow mr-2 car-hidden-mobile">
+            <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+            <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+          <div class="model-car dealer-box-shadow mr-2">
+            <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+            <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+        </div>
+        <div class="wrap-model-cars flex justify-center mb-4 md:mb-8">
+          <div class="model-car dealer-box-shadow mr-2">
+            <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+            <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+          <div class="model-car dealer-box-shadow mr-2">
+            <nz-skeleton-element class="mt-2 mx-auto" style="width: 100%; text-align: center" nzType="avatar" nzShape="square" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+            <nz-skeleton-element class="mt-2" nzType="input" [nzActive]="true" [nzSize]="'small'"></nz-skeleton-element>
+          </div>
+        </div>
+      </article>
+      <article class="item-modal-cars-mobile col-span-12">
+        <h3 class="title mb-4 text-center">Don’t find your car?</h3>
+        <button class="btn btn-dealer md:mt-6 mx-auto" type="button" (click)="openModalBuild()">BUILD YOUR OWN CAR</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="container-business mt-10 md:mt-24">
+    <div class="business container grid grid-cols-12 content-center">
+      <div class="item-business-left col-span-12 md:col-span-9">
+        <h3 class="title mb-8 md:mb-3">DASH FOR BUSINESS</h3>
+        <p class="content mb-4">Everyone wins with a new innovative retail experience</p>
+        <p class="desc">Reach unlimited potential customers within just a few clicks</p>
+      </div>
+      <div class="item-business-right col-span-12 md:col-span-3 flex content-center justify-center md:justify-end">
+        <p class="content justify-self-center self-center mr-4">Play video</p>
+        <img class="image" src="/assets/images/home-page/button-play.svg" alt="button-play"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-features container mt-12 mb-10">
+    <div class="features grid grid-cols-12">
+      <h3 class="title col-span-12 text-center mb-6">Why Dash?</h3>
+      <nz-collapse class="col-span-12 wrap-item-collapse md:mb-10">
+        <nz-collapse-panel class="item-collapse dealer-box-shadow" *ngFor="let panel of panels" [nzHeader]="panel.name" [nzActive]="panel.active">
+          <div style="margin:0;" [innerHTML]="panel.content"></div>
+        </nz-collapse-panel>
+      </nz-collapse>
+      <div class="col-span-12 md:col-span-5 lg:col-span-4 dealer-box-shadow calendar">
+        <div class="calendar-header mb-4">
+          <p class="title mb-2">Looking for personalized advice? Talk to our expert</p>
+          <div class="phone">(949) 472-5200</div>
+        </div>
+        <div class="calendar-table pt-4">
+          <p class="title">OPENING HOURS</p>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Monday</p>
+            <p class="col-span-8 date-number">08:00 - 17:00</p>
+          </div>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Tuesday</p>
+            <p class="col-span-8 date-number">08:00 - 17:00</p>
+          </div>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Wednesday</p>
+            <p class="col-span-8 date-number">08:00 - 17:00</p>
+          </div>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Thurday</p>
+            <p class="col-span-8 date-number">08:00 - 17:00</p>
+          </div>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Friday</p>
+            <p class="col-span-8 date-number">08:00 - 17:00</p>
+          </div>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Saturday</p>
+            <p class="col-span-8 date-number">Closed</p>
+          </div>
+          <div class="table-line grid grid-cols-12 mt-2">
+            <p class="col-span-4 date-text">Sunday</p>
+            <p class="col-span-8 date-number">Closed</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-7 lg:col-span-8 mt-3 md:mt-0 ml-0 md:ml-5 map">
+        <div *ngIf="apiLoaded | async">
+          <google-map width="100%" height="400px"></google-map>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>

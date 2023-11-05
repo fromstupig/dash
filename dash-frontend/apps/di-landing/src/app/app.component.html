@@ -1,0 +1,216 @@
+<nav class="pt-6" [ngClass]="{'active': isShowMenuMobile}">
+  <div class="short-menu hidden">
+    <img class="logo-dealer mb-7" src="../assets/images/logo-dealer.svg" alt="logo-dealer"/>
+    <img class="button-menu" src="../assets/images/icons/icon-menu.svg" alt="menu" (click)="isShowMenuMobile = true"/>
+  </div>
+  <div class="full-menu">
+    <button (click)="isShowMenuMobile = false" class="hidden">
+      <img src="../assets/images/icons/button-close.svg" alt="close"/>
+    </button>
+    <div class="container mx-auto flex flex-wrap content-center justify-center">
+      <a class="text-white mr-5" href="">Home</a>
+      <a class="text-white mr-5" href="">About</a>
+      <a class="text-white mr-5" href="">Products</a>
+      <a class="text-white mr-5" href="">Brands</a>
+      <a class="text-white" href="">Contact us</a>
+    </div>
+  </div>
+</nav>
+<header [ngStyle]="{'height': heightScreen}">
+  <div class="container header mx-auto flex flex-wrap h-full content-center justify-center ">
+    <img class="logo-dealer mb-7" src="../assets/images/logo-dealer.svg" alt="logo-dealer"/>
+    <h1 class="header-title text-white font-extrabold uppercase text-center w-full">Car dealership renovated</h1>
+    <div class="button-group w-full flex flex-wrap content-center justify-center mt-20 md:mt-2">
+      <button class="hover:bg-blue-700 hover:text-white bg-white text-black font-semibold py-2 px-4 rounded-full mr-2"
+              (click)="goToScroll('section-form-wrapper')">
+        Request demo
+      </button>
+      <button class="hover:bg-blue-700 bg-transparent text-white font-semibold py-2 px-4 rounded-full border mt-2 md:mt-0">
+        Play video
+      </button>
+    </div>
+    <div class="scroll-item mx-auto">
+      <img class="mx-auto" src="../assets/images/icons/icon-mouse.svg" alt="icon mouse"/>
+      <p class="text-white mt-4">Scroll up for more info</p>
+    </div>
+  </div>
+</header>
+<div class="dash-landing-page">
+  <main>
+    <section class="section-mobile-wrapper container mx-auto">
+      <div class="grid grid-cols-11 section-mobile">
+        <div class="lg:col-span-6 md:col-span-11 col-span-11 section-mobile-item image flex flex-wrap content-center">
+          <img class="image-logo mb-12 mx-auto" src="../assets/images/logo-dash.svg" alt="logo dash"/>
+          <img class="w-full" src="../assets/images/customers-in-phone.png" alt="customers-in-phone"/>
+        </div>
+        <div class="lg:col-span-5 md:col-span-11 col-span-11 lg:mt-0 mt-6 section-mobile-item context">
+          <img class="image-logo mb-5" src="../assets/images/logo-dash.svg" alt="logo dash"/>
+          <h2 class="title font-semibold ">Leading in mobile car dealership</h2>
+          <p class="content mt-4">
+            Let customers shop the way they want to shop, whether that means starting from home and completing their
+            deal in-store, or the other way around.
+          </p>
+          <div class="button-group mt-5 flex flex-wrap content-center justify-start">
+            <img alt="download-ios" class="mr-2 cursor-pointer" src="../assets/images/button-ios.png"/>
+            <img alt="download-android" class="cursor-pointer" src="../assets/images/button-android.png"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-custom-wrapper one container mx-auto">
+      <div class="grid lg:grid-cols-12 section-custom">
+        <div class="col-span-4 section-custom-item context flex flex-wrap content-center justify-center mr-2">
+          <h2 class="title font-semibold">With Dash, we bring happiness to your customers</h2>
+          <p class="content mt-4">
+            Our technologies help your customers choose a dream car with just a few taps.
+            Buying a car is as simple as buying a mobile phone.
+          </p>
+        </div>
+        <div class="col-span-8 section-custom-item image ml-2 flex justify-end">
+          <img class="image-web w-full" src="../assets/images/choose-by-web.png" alt="customer color"/>
+        </div>
+      </div>
+    </section>
+    <section class="section-custom-wrapper container mx-auto">
+      <div class="grid lg:grid-cols-5 section-custom">
+        <div class="col-span-3 section-custom-item image mr-2">
+          <img class="image-phone w-full" src="../assets/images/customer-color.png" alt="customer color"/>
+        </div>
+        <div class="col-span-2 section-custom-item context flex flex-wrap content-center justify-center ml-2">
+          <h2 class="title font-semibold md:mt-6">With Dash, we bring happiness to your customers</h2>
+          <p class="content mt-4">
+            Our technologies help your customers choose a dream car with just a few taps.
+            Buying a car is as simple as buying a mobile phone.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section-design-wrapper container mx-auto">
+      <div class="section-design grid lg:grid-cols-2">
+        <div class="col-span-1 section-design-item image">
+          <img class="w-full" alt="design-control" src="../assets/images/controls.png"/>
+        </div>
+        <div class="col-span-1 section-design-item context flex flex-wrap content-center justify-center">
+          <h2 class="title font-semibold">The first Neumorphism design platform in the car industry</h2>
+          <p class="content mt-4">
+            At Dealer Innovation, we encourage innovations by pushing everything to its limit. Since the world is still
+            using flat design. We, Apple, and Microsoft are parties moving forward to the new design language: <span class="font-bold">Neumorphism</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section-dealer-wrapper container mx-auto">
+      <div class="section-dealer grid lg:grid-cols-1">
+        <div class="col-span-1 section-dealer-item context">
+          <div class="content text-center">
+            <h2 class="title font-semibold">Dealers we support</h2>
+            <p class="content mt-4">
+              To give you the best solutions, we partner with the following brands
+            </p>
+          </div>
+          <div class="brands flex flex-wrap content-center justify-between xs:justify-center mt-16">
+            <img src="../assets/images/logo-cars/Infinity.svg" alt="Infinity"/>
+            <img src="../assets/images/logo-cars/Lexus.svg" alt="Infinity"/>
+            <img src="../assets/images/logo-cars/Volkswagen.svg" alt="Infinity"/>
+            <img src="../assets/images/logo-cars/Toyota.svg" alt="Infinity"/>
+            <img src="../assets/images/logo-cars/Subaru.svg" alt="Infinity"/>
+            <img src="../assets/images/logo-cars/Huyndai.svg" alt="Infinity"/>
+          </div>
+        </div>
+        <div class="col-span-1 section-dealer-item video grid grid-cols-8  mt-20 md:bg-cover bg-center bg-no-repeat text-white">
+          <div class="context mt-30 mb-28 lg:col-span-3 md:col-span-5 col-span-8">
+            <h2 class="title font-semibold text-white">Why car dealership needs to be renovated?</h2>
+            <p class="content mt-4">
+              Because we want your customers to have the best experience on Earth.
+            </p>
+          </div>
+          <div class="button lg:col-span-5 md:col-span-3 col-span-8 flex flex-wrap content-center justify-end">
+            <p class="content mr-8 justify-self-center self-center">Play video</p>
+            <img class="image" src="../assets/images/icons/button-play.svg" alt="button-play"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-people-wrapper container mx-auto mt-20">
+      <div class="grid grid-cols-8 section-people">
+        <div class="col-span-8 lg:col-span-4 section-people-item context flex flex-wrap content-center">
+          <h2 class="title font-semibold">People love our solutions</h2>
+          <p class="content mt-4">
+            Our technologies help your customers choose a dream car with just a few taps.
+            Buying a car is as simple as buying a mobile phone.
+          </p>
+        </div>
+        <div class="col-span-8 lg:col-span-4 section-people-item image ml-0 md:ml-2 flex flex-wrap justify-end lg:mr-16">
+          <img class="image-people w-1/2" src="../assets/images/people.png" alt="people"/>
+        </div>
+      </div>
+    </section>
+    <section class="section-form-wrapper container mx-auto mt-20" id="section-form-wrapper">
+      <form class="grid lg:grid-cols-2 section-form" #ngForm="ngForm" [formGroup]="formContact" (ngSubmit)="submitForm()">
+        <div class="col-span-2 section-form-item context">
+          <h2 class="title font-semibold text-center">Become our first customers!<br/>Try out our innovations at the very first days</h2>
+        </div>
+        <div class="lg:col-span-1 col-span-2 section-form-item input mt-8 mr-0 md:mr-5">
+          <nz-input-group class="nz-input" [nzPrefix]="prefixTemplateUser">
+            <input type="text" nz-input placeholder="Your name" formControlName="name"/>
+          </nz-input-group>
+          <ng-template #prefixTemplateUser><i class="icon" nz-icon nzType="user" nz-tooltip nzTooltipTitle="Extra information"></i></ng-template>
+        </div>
+        <div class="lg:col-span-1 col-span-2 section-form-item input mt-8">
+          <nz-input-group class="nz-input" [nzPrefix]="prefixTemplateEmail"
+                          [ngClass]="{'ng-invalid': ngForm.submitted && formContact.controls['email'].invalid}">
+            <input type="text" nz-input placeholder="Email*" formControlName="email" #email/>
+          </nz-input-group>
+          <p class="err-message mt-2 mb-0" *ngIf="ngForm.submitted && formContact.controls['email'].hasError('required')">Please enter your email</p>
+          <ng-template #prefixTemplateEmail><i class="icon" nz-icon nzType="mail" nz-tooltip nzTooltipTitle="Extra information"></i></ng-template>
+        </div>
+        <div class="lg:col-span-1 col-span-2 section-form-item input mt-8 mr-0 md:mr-5">
+          <nz-input-group class="nz-input" [nzPrefix]="prefixTemplateCompany">
+            <input type="text" nz-input placeholder="Company" formControlName="company"/>
+          </nz-input-group>
+          <ng-template #prefixTemplateCompany><i class="icon" nz-icon nzType="shop" nz-tooltip nzTooltipTitle="Extra information"></i></ng-template>
+        </div>
+        <div class="lg:col-span-1 col-span-2 section-form-item input mt-8">
+          <nz-input-group class="nz-input" [nzPrefix]="prefixTemplatePhone">
+            <input type="number" nz-input placeholder="Phone number" formControlName="phoneNumber"/>
+          </nz-input-group>
+          <ng-template #prefixTemplatePhone><i class="icon" nz-icon nzType="phone" nz-tooltip nzTooltipTitle="Extra information"></i></ng-template>
+        </div>
+        <div class="col-span-2 section-form-item input mt-8">
+          <nz-input-group class="nz-textarea" [nzPrefix]="prefixTemplateMessage">
+            <textarea nz-input placeholder="Your message" [nzAutosize]="{ minRows: 3, maxRows: 99 }" formControlName="message"></textarea>
+          </nz-input-group>
+          <ng-template #prefixTemplateMessage><i class="icon" nz-icon nzType="edit" nz-tooltip nzTooltipTitle="Extra information"></i></ng-template>
+        </div>
+        <div class="col-span-2 mx-auto mt-8">
+          <button nz-button [nzLoading]="isLoadingForm" nzType="default" class="hover:bg-blue-700 bg-transparent font-semibold text-white" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="mt-16">
+    <div class="footer container mx-auto pt-8 pb-5 text-white md:p-6">
+      <section class="footer-item brand grid lg:grid-cols-2 pb-8">
+        <img class="lg:col-span-1" src="../assets/images/logo-dealer.svg" alt="logo dealer"/>
+        <div class="col-span-1 lg:mt-0 mt-4 group-logo-brands flex flex-wrap lg:content-end lg:justify-end md:content-end md:justify-end">
+          <i class="icon mr-5" nz-icon nzType="facebook" nz-tooltip nzTooltipTitle="Extra information"></i>
+          <i class="icon mr-5" nz-icon nzType="twitter" nz-tooltip nzTooltipTitle="Extra information"></i>
+          <i class="icon" nz-icon nzType="instagram" nz-tooltip nzTooltipTitle="Extra information"></i>
+        </div>
+        <h2 class="lg:col-span-1 policy-and-term lg:text-right md:text-right text-white lg:mt-0 mt-4 hidden">
+          <span class="mr-4 cursor-pointer">Privacy Policy</span>
+          <span class="cursor-pointer">Terms & Conditions</span>
+        </h2>
+      </section>
+      <section class="footer-item context grid lg:grid-cols-2 pt-8">
+        <h2 class="lg:col-span-1 copy-right text-white">Copyright @2020, Dealer Innovations. All right reserved.</h2>
+        <h2 class="lg:col-span-1 policy-and-term lg:text-right md:text-right text-white lg:mt-0 mt-4">
+          <span class="mr-4 cursor-pointer">Privacy Policy</span>
+          <span class="cursor-pointer">Terms & Conditions</span>
+        </h2>
+      </section>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,451 @@
+{
+  "_id": ObjectId(
+  "5f4f0ec07491928028bbcbee"
+  ),
+  "make": "Volvo",
+  "make_id": "41",
+  "model": "S60",
+  "model_id": "32345",
+  "year": "2020",
+  "other_info": {
+    "model": {
+      "@id": "32345",
+      "@makeName": "Volvo",
+      "@name": "S60",
+      "@year": "2020",
+      "style": [
+        {
+          "@baseMSRP": "$36,050.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "Front Wheel Drive",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Intercooled Turbo Premium Unleaded I-4",
+          "@fullDisplayName": "2020 Volvo S60 T5 FWD Momentum",
+          "@id": "406526",
+          "@imageUrl": "http://media-or.carbook.com/autoBuilderData/stockPhotos/29973.jpg",
+          "@manufactureCode": "S60T5M",
+          "@name": "T5 FWD",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control,Front-Wheel Drive,2.96 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,14.5 Gal. Fuel Tank,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential",
+              "Engine": "2.0L 16V DI I4 Turbocharged Drive-E -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Steel Spare Wheel,Compact Spare Tire Mounted Inside Under Cargo,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Black Rub Strip/Fascia Accent,Black Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Door Handles,Body-Colored Power w/Tilt Down Heated Side Mirrors w/Manual Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Black Grille w/Chrome Surround,Trunk Rear Cargo Access,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto High-Beam Headlamps w/Delay-Off,Rear Fog Lamps,Perimeter/Approach Lights,LED Brakelights",
+              "Wheels": "18\" Alloy",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "High Performance Audio -inc"
+            },
+            "INTERIOR": {
+              "other_info": "8-Way Driver Seat,8-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Proximity Key For Push Button Start Only,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Cruise Control w/Steering Wheel Controls,Dual Zone Front Automatic Air Conditioning,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Leatherette Seating Surfaces,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Front Bucket Seats -inc": "10-way power front seats, 2-way power lumbar and driver seat memory",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Power Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Aluminum Instrument Panel Insert, Aluminum Door Panel Insert, Aluminum Console Insert and Metal-Look Interior Accents",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,Back-Up Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$42,900.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "Front Wheel Drive",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Intercooled Turbo Premium Unleaded I-4",
+          "@fullDisplayName": "2020 Volvo S60 T5 FWD Inscription",
+          "@id": "406528",
+          "@imageUrl": "",
+          "@manufactureCode": "S60T5I",
+          "@name": "T5 FWD",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control,Front-Wheel Drive,2.96 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,14.5 Gal. Fuel Tank,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential",
+              "Engine": "2.0L 16V DI I4 Turbocharged Drive-E -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Steel Spare Wheel,Compact Spare Tire Mounted Inside Under Cargo,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Body-Colored Rub Strip/Fascia Accent and Chrome Bumper Insert,Body-Colored Door Handles,Chrome Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Chrome Grille,Power Open And Close Trunk Rear Cargo Access,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto High-Beam Headlamps w/Delay-Off,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps",
+              "Wheels": "18\" Unique Inscription",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "harman/kardon Premium Sound -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Leather Seating Surfaces,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Driver And Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Front Comfort Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Genuine Wood Instrument Panel Insert, Genuine Wood Door Panel Insert, Genuine Wood Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,Back-Up Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$40,550.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "All Wheel",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Turbo/Supercharger Premium Unleaded I-4",
+          "@fullDisplayName": "2020 Volvo S60 T6 AWD Momentum",
+          "@id": "406529",
+          "@imageUrl": "",
+          "@manufactureCode": "S60T6MAWD",
+          "@name": "T6 AWD",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control,Full-Time All-Wheel,3.08 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,15.9 Gal. Fuel Tank,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential",
+              "Engine": "2.0L 16V DI I4 Turbocharged/Supercharged -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Steel Spare Wheel,Compact Spare Tire Mounted Inside Under Cargo,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Black Rub Strip/Fascia Accent,Black Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Door Handles,Body-Colored Power w/Tilt Down Heated Side Mirrors w/Manual Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Black Grille w/Chrome Surround,Trunk Rear Cargo Access,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto High-Beam Headlamps w/Delay-Off,Rear Fog Lamps,Perimeter/Approach Lights,LED Brakelights",
+              "Wheels": "18\" Alloy",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "High Performance Audio -inc"
+            },
+            "INTERIOR": {
+              "other_info": "8-Way Driver Seat,8-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Proximity Key For Push Button Start Only,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Cruise Control w/Steering Wheel Controls,Dual Zone Front Automatic Air Conditioning,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Leatherette Seating Surfaces,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Heated Front Bucket Seats -inc": "10-way power front seats, 2-way power lumbar and driver seat memory",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Power Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Aluminum Instrument Panel Insert, Aluminum Door Panel Insert, Aluminum Console Insert and Metal-Look Interior Accents",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,Back-Up Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$47,400.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "All Wheel",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Turbo/Supercharger Premium Unleaded I-4",
+          "@fullDisplayName": "2020 Volvo S60 T6 AWD Inscription",
+          "@id": "406531",
+          "@imageUrl": "",
+          "@manufactureCode": "S60T6IAWD",
+          "@name": "T6 AWD",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control,Full-Time All-Wheel,3.08 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,15.9 Gal. Fuel Tank,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential",
+              "Engine": "2.0L 16V DI I4 Turbocharged/Supercharged -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Steel Spare Wheel,Compact Spare Tire Mounted Inside Under Cargo,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Body-Colored Rub Strip/Fascia Accent and Chrome Bumper Insert,Body-Colored Door Handles,Chrome Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Chrome Grille,Power Open And Close Trunk Rear Cargo Access,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto High-Beam Headlamps w/Delay-Off,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps",
+              "Wheels": "18\" Unique Inscription",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "harman/kardon Premium Sound -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Leather Seating Surfaces,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Driver And Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Heated Front Comfort Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Genuine Wood Instrument Panel Insert, Genuine Wood Door Panel Insert, Genuine Wood Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,Back-Up Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$42,900.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "Front Wheel Drive",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Intercooled Turbo Premium Unleaded I-4",
+          "@fullDisplayName": "2020 Volvo S60 T5 FWD R-Design",
+          "@id": "406527",
+          "@imageUrl": "http://media-or.carbook.com/autoBuilderData/stockPhotos/29975.jpg",
+          "@manufactureCode": "S60T5R",
+          "@name": "T5 FWD",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control w/Steering Wheel Controls,Front-Wheel Drive,2.96 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,14.5 Gal. Fuel Tank,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential",
+              "Engine": "2.0L 16V DI I4 Turbocharged Drive-E -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Steel Spare Wheel,Compact Spare Tire Mounted Inside Under Cargo,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Black Rub Strip/Fascia Accent and Body-Colored Bumper Insert,Black Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Door Handles,Black Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Black Grille w/Chrome Surround,Power Open And Close Trunk Rear Cargo Access,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto High-Beam Headlamps w/Delay-Off,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps",
+              "Wheels": "18\" Unique R-Design",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "harman/kardon Premium Sound -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Front Sport Bucket Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Aluminum Instrument Panel Insert, Aluminum Door Panel Insert, Aluminum Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "R-Design Nappa Leather Seating Surfaces -inc": "open grid textile upholstery",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,Back-Up Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$47,400.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "All Wheel",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Turbo/Supercharger Premium Unleaded I-4",
+          "@fullDisplayName": "2020 Volvo S60 T6 AWD R-Design",
+          "@id": "406530",
+          "@imageUrl": "",
+          "@manufactureCode": "S60T6RAWD",
+          "@name": "T6 AWD",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control w/Steering Wheel Controls,Full-Time All-Wheel,3.08 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,15.9 Gal. Fuel Tank,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential",
+              "Engine": "2.0L 16V DI I4 Turbocharged/Supercharged -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Steel Spare Wheel,Compact Spare Tire Mounted Inside Under Cargo,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Black Rub Strip/Fascia Accent and Body-Colored Bumper Insert,Black Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Door Handles,Black Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Black Grille w/Chrome Surround,Power Open And Close Trunk Rear Cargo Access,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto High-Beam Headlamps w/Delay-Off,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps",
+              "Wheels": "18\" Unique R-Design",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "harman/kardon Premium Sound -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Heated Front Sport Bucket Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Aluminum Instrument Panel Insert, Aluminum Door Panel Insert, Aluminum Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "R-Design Nappa Leather Seating Surfaces -inc": "open grid textile upholstery",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,Back-Up Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$55,400.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "All Wheel",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Turbo/Supercharger Gas/Electric I-4",
+          "@fullDisplayName": "2020 Volvo S60 T8 eAWD Plug-In Hybrid R-Design",
+          "@id": "406532",
+          "@imageUrl": "http://media-or.carbook.com/autoBuilderData/stockPhotos/30032.jpg",
+          "@manufactureCode": "S60T8RAWD",
+          "@name": "T8 eAWD Plug-In Hybrid",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control w/Steering Wheel Controls,Full-Time All-Wheel,3.08 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,15.9 Gal. Fuel Tank,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,Regenerative 4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential,Lithium Ion Traction Battery w/15 Hrs Charge Time @ 110/120V and 3 Hrs Charge Time @ 220/240V",
+              "Engine": "2.0L 16V DI I4 Turbocharged/Supercharged -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Spare Tire Mobility Kit,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Black Rub Strip/Fascia Accent and Body-Colored Bumper Insert,Black Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Door Handles,Black Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Black Grille w/Chrome Surround,Power Open And Close Trunk Rear Cargo Access,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto-Leveling Directionally Adaptive Auto High-Beam Headlamps w/Washer and Delay-Off,Cornering Lights",
+              "Wheels": "18\" Unique R-Design",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "harman/kardon Premium Sound System -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Distance Pacing w/Traffic Stop-Go,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Head-Up Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Heated Front Sport Bucket Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Power/Regen, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Aluminum Instrument Panel Insert, Aluminum Door Panel Insert, Aluminum Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "R-Design Nappa Leather w/Textile Upholstery -inc": "open grid textile upholstery",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Cargo Features -inc": "Spare Tire Mobility Kit",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,360 Surroundview Camera Back-Up Camera,Front Camera,Left Side Camera,Right Side Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$55,400.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "All Wheel",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Turbo/Supercharger Gas/Electric I-4",
+          "@fullDisplayName": "2020 Volvo S60 T8 eAWD Plug-In Hybrid Inscription",
+          "@id": "406533",
+          "@imageUrl": "",
+          "@manufactureCode": "S60T8IAWD",
+          "@name": "T8 eAWD Plug-In Hybrid",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control,Full-Time All-Wheel,3.08 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Gas-Pressurized Shock Absorbers,Front And Rear Anti-Roll Bars,Touring Suspension,Electric Power-Assist Steering,Quasi-Dual Stainless Steel Exhaust w/Polished Tailpipe Finisher,15.9 Gal. Fuel Tank,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,Regenerative 4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential,Lithium Ion Traction Battery w/15 Hrs Charge Time @ 110/120V and 3 Hrs Charge Time @ 220/240V",
+              "Engine": "2.0L 16V DI I4 Turbocharged/Supercharged -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Spare Tire Mobility Kit,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Body-Colored Rub Strip/Fascia Accent and Chrome Bumper Insert,Body-Colored Door Handles,Chrome Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Chrome Grille,Power Open And Close Trunk Rear Cargo Access,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto-Leveling Directionally Adaptive Auto High-Beam Headlamps w/Washer and Delay-Off,Cornering Lights",
+              "Wheels": "18\" Unique Inscription",
+              "Tires": "235/45R18 AS"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "harman/kardon Premium Sound System -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Distance Pacing w/Traffic Stop-Go,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Leather Seating Surfaces,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Driver And Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Head-Up Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Heated Front Comfort Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Power/Regen, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Genuine Wood Instrument Panel Insert, Genuine Wood Door Panel Insert, Genuine Wood Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Cargo Features -inc": "Spare Tire Mobility Kit",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,360 Surroundview Camera Back-Up Camera,Front Camera,Left Side Camera,Right Side Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        },
+        {
+          "@baseMSRP": "$64,800.00",
+          "@bodyDescPrim": "4dr Car",
+          "@bodyDescSecd": "",
+          "@bodyType": "4dr Car",
+          "@drivetrain": "All Wheel",
+          "@engineDisplacement": "2.0 L/120",
+          "@engineType": "Turbo/Supercharger Gas/Electric I-4",
+          "@fullDisplayName": "2020 Volvo S60 T8 eAWD Plug-In Hybrid Polestar",
+          "@id": "406849",
+          "@imageUrl": "",
+          "@manufactureCode": "S60T8PAWD",
+          "@name": "T8 eAWD Plug-In Hybrid",
+          "@transDesc": "Automatic w/OD",
+          "@transType": "8",
+          "details": {
+            "MECHANICAL": {
+              "other_info": "Engine Auto Stop-Start Feature,Transmission w/Driver Selectable Mode and Geartronic Sequential Shift Control w/Steering Wheel Controls,Full-Time All-Wheel,3.08 Axle Ratio,80-Amp/Hr 800CCA Maintenance-Free Battery w/Run Down Protection,210 Amp Alternator,Front And Rear Anti-Roll Bars,Ohlins Brand Name Shock Absorbers,Sport Tuned Suspension,Electric Power-Assist Steering,15.9 Gal. Fuel Tank,Quasi-Dual Stainless Steel Exhaust w/Dark Chrome Tailpipe Finisher,Double Wishbone Front Suspension w/Coil Springs,Multi-Link Rear Suspension w/Transverse Leaf Springs,Regenerative 4-Wheel Disc Brakes w/4-Wheel ABS, Front Vented Discs, Brake Assist, Hill Hold Control and Electric Parking Brake,Brake Actuated Limited Slip Differential,Lithium Ion Traction Battery w/15 Hrs Charge Time @ 110/120V and 3 Hrs Charge Time @ 220/240V",
+              "Engine": "2.0L 16V DI I4 Turbo/Super w/Polestar -inc",
+              "Transmission": "8-Speed Geartronic Automatic -inc"
+            },
+            "EXTERIOR": {
+              "other_info": "Spare Tire Mobility Kit,Clearcoat Paint,Express Open/Close Sliding And Tilting Laminated Glass 1st And 2nd Row Sunroof w/Power Sunshade,Body-Colored Front Bumper w/Colored Rub Strip/Fascia Accent,Body-Colored Rear Bumper w/Black Rub Strip/Fascia Accent and Body-Colored Bumper Insert,Black Side Windows Trim, Black Front Windshield Trim and Black Rear Window Trim,Body-Colored Door Handles,Black Power w/Tilt Down Heated Auto Dimming Side Mirrors w/Power Folding and Turn Signal Indicator,Fixed Rear Window w/Defroster,Light Tinted Glass,Rain Detecting Variable Intermittent Wipers w/Heated Jets,Fully Galvanized Steel Panels,Black Grille w/Chrome Surround,Power Open And Close Trunk Rear Cargo Access,Perimeter/Approach Lights,LED Brakelights,Front And Rear Fog Lamps,Fully Automatic Aero-Composite Led Low/High Beam Daytime Running Auto-Leveling Directionally Adaptive Auto High-Beam Headlamps w/Washer and Delay-Off,Cornering Lights",
+              "Wheels": "19\" 5-Y Spoke Black Forged Alloy",
+              "Tires": "235/40WR19 Summer"
+            },
+            "ENTERTAINMENT": {
+              "other_info": "Radio w/Seek-Scan, Clock, Speed Compensated Volume Control, Voice Activation and Radio Data System,Audio Theft Deterrent,Window Grid Diversity Antenna,Automatic Equalizer,Bluetooth Wireless Phone Connectivity,2 LCD Monitors In The Front",
+              "Radio": "Bowers & Wilkins Premium Sound System -inc"
+            },
+            "INTERIOR": {
+              "other_info": "10-Way Driver Seat,10-Way Passenger Seat,60-40 Folding Bench Front Facing Fold Forward Seatback Rear Seat,Manual Tilt/Telescoping Steering Column,Power Rear Windows,Sensus Connect Mobile Hotspot Internet Access,Sport Heated Leather/Metal-Look Steering Wheel,Front Cupholder,Rear Cupholder,Compass,Valet Function,Remote Keyless Entry w/Integrated Key Transmitter, Illuminated Entry, Illuminated Ignition Switch and Panic Button,Proximity Key For Doors And Push Button Start,HomeLink Garage Door Transmitter,Cruise Control w/Steering Wheel Controls,Distance Pacing w/Traffic Stop-Go,Dual Zone Front And Rear Automatic Air Conditioning,Rear HVAC w/Separate Controls,Illuminated Locking Glove Box,Driver Foot Rest,Full Cloth Headliner,Leatherette Door Trim Insert,Leather/Aluminum Gear Shifter Material,Day-Night Auto-Dimming Rearview Mirror,Driver And Passenger Visor Vanity Mirrors w/Passenger Illumination,Full Floor Console w/Covered Storage and 2 12V DC Power Outlets,Front And Rear Map Lights,Fade-To-Off Interior Lighting,Carpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim,Cargo Space Lights,Smart Device Remote Engine Start,Tracker System,Smart Device Integration,Sensus Navigation,Refrigerated/Cooled Box Located In The Glovebox, Driver And Passenger Door Bins and Audio Media Storage,Power 1st Row Windows w/Front And Rear 1-Touch Up/Down,Delayed Accessory Power,Power Door Locks w/Autolock Feature,Redundant Digital Speedometer,Trip Computer,Outside Temp Gauge,Digital/Analog Display,Head-Up Display,Anti-Whiplash Fixed Front Head Restraints and Power Adjustable Rear Head Restraints,Front Center Armrest and Rear Center Armrest w/Pass-Thru w/Storage,2 Seatback Storage Pockets,Perimeter Alarm,Engine Immobilizer,2 12V DC Power Outlets,Air Filtration",
+              "Heated Front Sport Bucket Seats -inc": "10-way power front seats, 4-way power lumbar, front seat memory and power cushion extensions",
+              "Gauges -inc": "Speedometer, Odometer, Engine Coolant Temp, Tachometer, Power/Regen, Trip Odometer and Trip Computer",
+              "Remote Releases -Inc": "Proximity Cargo Access",
+              "HVAC -inc": "Underseat Ducts and Headliner/Pillar Ducts",
+              "Interior Trim -inc": "Aluminum Instrument Panel Insert, Aluminum Door Panel Insert, Aluminum Console Insert, Metal-Look Interior Accents and Leatherette Upholstered Dashboard",
+              "Nappa Leather w/Textile Upholstery -inc": "open grid textile upholstery and gold seatbelts",
+              "Full Carpet Floor Covering -inc": "Carpet Front And Rear Floor Mats",
+              "Cargo Features -inc": "Spare Tire Mobility Kit",
+              "Memory Settings -inc": "Door Mirrors",
+              "FOB Controls -inc": "Cargo Access"
+            },
+            "SAFETY": {
+              "other_info": "DSTC Electronic Stability Control (ESC),TRACS ABS And Driveline Traction Control,Side Impact Beams,Dual Stage Driver And Passenger Seat-Mounted Side Airbags,City Safety,Lane Keeping Aid/Run-off Road Mitigation Lane Keeping Assist,Lane Keeping Aid/Run-off Road Mitigation Lane Departure Warning,Front And Rear Parking Sensors,BLIS w/Steer Assist Blind Spot,Low Tire Pressure Warning,Dual Stage Driver And Passenger Front Airbags,Curtain 1st And 2nd Row Airbags,Airbag Occupancy Sensor,Driver Knee Airbag,Power Rear Child Safety Locks,360 Surroundview Camera Back-Up Camera,Front Camera,Left Side Camera,Right Side Camera",
+              "Outboard Front Lap And Shoulder Safety Belts -inc": "Rear Center 3 Point, Height Adjusters and Pretensioners"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "has_details": "true"
+}

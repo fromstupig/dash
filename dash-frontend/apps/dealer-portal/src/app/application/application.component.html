@@ -1,0 +1,26 @@
+<div class="board-list">
+  <nz-table #requestListTable
+            nzShowPagination
+            [nzData]="requests">
+    <thead>
+    <tr>
+      <th class="px-4 py-2">Model Name</th>
+      <th class="px-4 py-2">Request Day</th>
+      <th class="px-4 py-2">Deal Type</th>
+      <th class="px-4 py-2">MSRP</th>
+      <th class="px-4 py-2">Status</th>
+      <th class="px-4 py-2">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let request of requestListTable.data">
+      <th class=" px-4 py-2">{{ request.vehicle.vehicle_model_style.name }}</th>
+      <th class=" px-4 py-2">{{ request.creation_date | date :'short' }}</th>
+      <th class=" px-4 py-2">{{ convertDealType(request.pricing_detail.dealType) | uppercase }}</th>
+      <th class=" px-4 py-2">{{ request.pricing_detail.pricing.msrp }}</th>
+      <th class=" px-4 py-2">{{ request.status }}</th>
+      <th class=" px-4 py-2"><a (click)="goToRequestDetail(request.id)">Detail</a></th>
+    </tr>
+    </tbody>
+  </nz-table>
+</div>

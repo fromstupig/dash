@@ -1,0 +1,95 @@
+<div class="header flex justify-between">
+  <div class="header-dealer flex items-center" [routerLink]="'/home'">
+    <div class="header-dealer-logo">
+      <svg-icon src="/assets/dealer-logo.svg"></svg-icon>
+    </div>
+    <div class="header-dealer-name">
+      Dealer Name
+    </div>
+  </div>
+  <div
+    class="header-searching"
+    [ngClass]="{
+      'header-searching-mobile': (isMobile$ | async),
+      'show': isSearchingMobile
+    }"
+  >
+    <div class="header-searching-title flex justify-between items-center" *ngIf="isMobile$ | async">
+      <h3 class="header-searching-title-text">Search</h3>
+      <div class="header-searching-close cursor-pointer" (click)="setVisibleSearchingArea(false)">
+        <i nz-icon nzType="close" nzTheme="outline"></i>
+      </div>
+    </div>
+    <div class="header-searching-area">
+      <div class="header-searching-area-input">
+        <label>
+          <input type="text" placeholder="Search model or vehicle" />
+        </label>
+      </div>
+      <div class="header-searching-area-markup">
+        <i nz-icon nzType="search"></i>
+      </div>
+    </div>
+    <div class="header-searching-submission" *ngIf="isMobile$ | async">
+      <button class="header-searching-submission-button" type="button">Search</button>
+    </div>
+  </div>
+  <div class="header-group-action flex items-center" *ngIf="isMobile$ | async">
+    <div class="header-group-action-link cursor-pointer block sm:hidden" (click)="setVisibleSearchingArea(true)">
+      <i nz-icon nzType="search"></i>
+    </div>
+    <div class="header-group-action-menu cursor-pointer" (click)="setVisibleMenu(true)">
+      <i nz-icon nzType="menu"></i>
+    </div>
+  </div>
+  <div
+    class="header-action"
+    [ngClass]="{'show': (isMobile$ | async) && isOpenMenu}"
+    (click)="isOpenMenu = false"
+  >
+    <div class="header-searching-title flex justify-between items-center" *ngIf="isMobile$ | async">
+      <h3 class="header-searching-title-text"></h3>
+      <div class="header-searching-close cursor-pointer" (click)="setVisibleMenu(false)">
+        <i nz-icon nzType="close" nzTheme="outline"></i>
+      </div>
+    </div>
+    <div class="header-action-title" *ngIf="isMobile$ | async">
+      <div class="header-dealer flex items-center justify-center lg:justify-start" [routerLink]="'/home'">
+        <div class="header-dealer-logo">
+          <svg-icon src="/assets/dealer-logo.svg"></svg-icon>
+        </div>
+        <div class="header-dealer-name">
+          Dealer Name
+        </div>
+      </div>
+    </div>
+    <div class="header-action-link cursor-pointer m-0 sm:mr-4">How it works</div>
+    <div class="header-action-link cursor-pointer m-0 sm:mr-4">Contact us</div>
+    <div class="header-action-button cursor-pointer m-0 sm:mr-4" (click)="showDialogLogin()" *ngIf="isLogin==false">
+      Login
+    </div>
+    <div class="header-action-link cursor-pointer m-0 sm:mr-4" [routerLink]="'/board'" *ngIf="isLogin==true">
+      Hi {{ currentUser.user.lastName }}!
+    </div>
+    <div class="header-action-button cursor-pointer m-0 sm:mr-4" (click)="logOut()" *ngIf="isLogin==true">Log Out</div>
+    <div class="header-action-menu cursor-pointer" (click)="setVisibleFooterQuickView(true)"
+         *ngIf="!(isMobile$ | async)">
+      <i nz-icon nzType="menu"></i>
+    </div>
+  </div>
+  <ng-template #signin>
+    <dash-signin (submitForm)="onSignIn($event)" (redirectSignup)="showDialogSignup()"></dash-signin>
+  </ng-template>
+  <ng-template #signup>
+    <dash-signup (submitForm)="onSignUp($event)" (redirectLogin)="showDialogLogin()"></dash-signup>
+  </ng-template>
+</div>
+<nz-drawer
+  [nzClosable]="false"
+  [nzVisible]="isVisibleFooterQuickView"
+  (nzOnClose)="setVisibleFooterQuickView(false)"
+  nzPlacement="bottom"
+  nzWrapClassName="header-drawer container"
+>
+  <dash-footer-quick-access></dash-footer-quick-access>
+</nz-drawer>

@@ -1,0 +1,19 @@
+FROM python:3.7.8-slim
+
+RUN apt-get update && apt-get install -y libpq-dev gcc
+
+RUN python -m pip install --upgrade pip
+RUN python -m pip install setuptools==45
+WORKDIR /app
+
+# By copying over requirements first, we make sure that Docker will cache
+# our installed requirements rather than reinstall them on every build
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
+
+# Now copy in our code, and run it
+COPY . /app
+EXPOSE 5000
+RUN chmod +x ./entrypoint.sh
+ENTRYPOINT ["sh", "entrypoint.sh"]
+

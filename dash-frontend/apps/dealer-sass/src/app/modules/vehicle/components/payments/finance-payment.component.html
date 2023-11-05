@@ -1,0 +1,74 @@
+<nz-layout class="bg-transparent">
+  <div nz-row class="bg-white overview" [class.h-16]="loading"
+       [class.text-center]="loading">
+    <div nz-col nzSpan="3" class="option-title">
+      <span class="align-top" [class.underline]="editMode">Finance</span>
+    </div>
+    <nz-spin nzSimple *ngIf="loading" class="w-full"></nz-spin>
+    <div nz-col nzSpan="21" class="pb-2 price-txt" *ngIf="!loading">
+      <p>
+        <i nz-icon nzType="info-circle"></i>&nbsp;
+        <span class="text-blue-400 highlight-txt">
+        {{dealInformation!.loan.monthlyPayment.total | currency}}</span> /month
+      </p>
+      <p class="small-txt">
+        <i nz-icon nzType="info-circle"></i> Rebate & discount: {{dealInformation!.pricing.dealerDiscount | currency}}
+      </p>
+      <p class="highlight-txt color-black-dash">MSRP: {{ dealInformation!.pricing.msrp | currency}}</p>
+      <p class="super-small-txt">{{dealInformation!.loan.downPayment | currency}} down,
+        {{dealInformation!.loan.term}} months, {{apr | percent}} APR
+      </p>
+    </div>
+  </div>
+
+  <div class="edit-container" *ngIf="editMode">
+    <nz-divider></nz-divider>
+    <form [formGroup]="formGroup">
+      <div nz-col nzSpan="24">
+        <p class="highlight-txt color-black-dash mt-4">
+          Adjust Down Payment
+        </p>
+        <nz-row nzAlign="middle" class="my-2">
+          <div nzSpan="1" class="pr-2">$</div>
+          <div nz-col nzSpan="4">
+            <nz-input-number
+              [nzMin]="0"
+              [nzMax]="amountMax"
+              [ngModel]="amount"
+              (ngModelChange)="onAmountChange($event)"
+              [ngModelOptions]="{standalone: true}"
+            ></nz-input-number>
+          </div>
+          <div nz-col nzSpan="19" class="pl-2">
+            <nz-slider
+              [nzDisabled]="false"
+              [nzMin]="0"
+              [nzMax]="amountMax"
+              [ngModel]="amount"
+              (ngModelChange)="onAmountChange($event)"
+              [ngModelOptions]="{standalone: true}"
+            ></nz-slider>
+          </div>
+        </nz-row>
+
+        <p class="highlight-txt color-black-dash mt-4">Low Interest Financing</p>
+
+        <nz-radio-group formControlName="term" class="mt-2">
+          <label nz-radio-button *ngFor="let item of loanPayment.options.term"
+                 [nzValue]="item" class="radio-box w-16">
+            <p>{{item}}</p>
+            <span class="text-xs">months</span></label>
+        </nz-radio-group>
+
+        <p class="highlight-txt color-black-dash my-4">
+          Rates based on a credit score of: <b>Excellent</b>
+          <a class="ml-4" href="#">Edit</a>
+        </p>
+        <p>Don’t know your credit score? <u><a href="#">Get pre-qualification</a></u></p>
+      </div>
+    </form>
+  </div>
+</nz-layout>
+
+
+

@@ -1,0 +1,433 @@
+$image-path: '../../../../../assets/images/home-page/';
+$blue-default: #0084D0;
+$white-default: white;
+$black-default: black;
+$gray-default: #888888;
+
+
+.home-page {
+  width: 100%;
+  font-weight: 300;
+  color: $black-default;
+
+  .header {
+    background-image: url($image-path + "background-header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 40px;
+    position: relative;
+
+    .header-item-left {
+
+      .desc {
+        font-size: 20px;
+        line-height: 27px;
+        color: $white-default;
+      }
+
+      .title {
+        font-size: 50px;
+        line-height: 68px;
+        font-weight: bold;
+        color: $white-default;
+      }
+    }
+
+    .header-item-right {
+
+      .button-play {
+        color: $white-default;
+        cursor: pointer;
+
+        .content {
+          font-weight: bold;
+          color: $white-default;
+        }
+      }
+    }
+
+    .header-scroll-up {
+      position: absolute;
+      width: 100%;
+      bottom: 12%;
+      p {
+        color: $white-default;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+  }
+
+  .container-list-card {
+    position: absolute;
+    width: 100%;
+    bottom: -14%;
+
+    .list-card {
+      article {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F2F2F2 100%);
+        box-shadow: -1px 1px 2px rgba(227, 227, 227, 0.2), 1px -1px 2px rgba(227, 227, 227, 0.2),
+        -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(227, 227, 227, 0.9),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(227, 227, 227, 0.5);
+        border-radius: 10px;
+        max-width: 319px;
+        padding: 36px 20px 24px 20px;
+
+        &:hover {
+          background: $blue-default;
+          box-shadow: -1px 1px 2px $blue-default, 1px -1px 2px $blue-default, -1px -1px 2px $blue-default,
+          1px 1px 3px $blue-default, inset 1px 1px 2px $blue-default, inset -1px -1px 2px $blue-default;
+          h3, p {
+            color: $white-default;
+          }
+        }
+
+        h3 {
+          font-weight: 800;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .container-model-cars {
+    .item-model-cars-left {
+      .title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+      }
+      .content {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 26px;
+        color: $gray-default;
+      }
+      .btn-dealer {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+
+    .item-modal-cars-right {
+      .model-car {
+        width: 100%;
+        max-width: 235px;
+        max-height: 192px;
+        padding: 10px 35px 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        cursor: pointer;
+
+        .content {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .item-modal-cars-mobile {
+      display: none;
+      .title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .container-business {
+    background-image: url($image-path + 'background-business.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .business {
+      min-height: 576px;
+      .item-business-left {
+        .title {
+          color: white;
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: bold;
+        }
+        .content {
+          color: white;
+          font-weight: bold;
+          font-size: 40px;
+          line-height: 55px;
+        }
+        .desc {
+          color: white;
+          font-size: 20px;
+          line-height: 27px;
+        }
+      }
+      .item-business-right {
+        .content {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .container-features {
+    .features {
+      .title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+      }
+      .wrap-item-collapse {
+        background: transparent;
+        border: none;
+
+        .item-collapse {
+          margin-bottom: 17px;
+          font-size: 18px;
+          line-height: 25px;
+
+          .ant-collapse-content {
+            border-top: none;
+            .ant-collapse-content-box {
+              padding-top: 0;
+            }
+          }
+
+          .ant-collapse-header {
+            padding: 12px 40px 12px 16px;
+          }
+
+          .ant-collapse-arrow {
+            left: auto;
+            right: 16px
+          }
+        }
+      }
+      .calendar {
+        padding: 20px;
+        .calendar-header {
+          .title {
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: normal;
+            color: $gray-default;
+          }
+          .phone {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 33px;
+          }
+        }
+        .calendar-table {
+          border-top: 1px solid #E5E5E5;
+          .title {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 25px;
+            color: $gray-default;
+          }
+          .date-text, .date-number {
+            font-size: 16px;
+            line-height: 22px;
+          }
+          .date-number {
+            font-weight: bold;
+          }
+        }
+      }
+      .map {
+        box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.3),
+        inset -1px -1px 2px rgba(219, 219, 219, 0.3);
+        filter: drop-shadow(-5px 5px 10px rgba(220, 220, 220, 0.2)),
+          drop-shadow(5px -5px 10px rgba(217, 217, 217, 0.2)),
+          drop-shadow(-5px -5px 10px rgba(255, 255, 255, 0.9)),
+          drop-shadow(5px 5px 13px rgba(220, 220, 220, 0.5));
+        border-radius: 20px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-page {
+    .container {
+      padding: 30px;
+    }
+
+    .container-list-card {
+      bottom: -10%;
+      .list-card {
+        article {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 475px) {
+  .home-page {
+    .header {
+      background-position-x: 50%;
+      height: 764px;
+
+      .header-item-left {
+        .title {
+          font-size: 36px;
+          line-height: 49px;
+        }
+        .btn-dealer {
+          display: block;
+        }
+      }
+
+      .header-item-right {
+        .content {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .image {
+          width: 20px;
+        }
+      }
+
+      .header-scroll-up {
+        bottom: 3%;
+      }
+    }
+
+    .container-list-card {
+      position: initial;
+      padding: 20px;
+      .list-card {
+        article {
+          max-width: 100%;
+          font-size: 16px;
+          line-height: 22px;
+          padding-left: 30px;
+          padding-right: 30px;
+          &.item-one, &.item-two {
+            margin-bottom: 15px;
+          }
+
+          h3 {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+
+    .container-model-cars {
+      padding: 0 20px;
+      .item-model-cars-left {
+
+        .title {
+          font-weight: 600;
+          font-size: 26px;
+          line-height: 35px;
+        }
+
+        .content {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        .btn {
+          display: none;
+        }
+      }
+
+      .item-modal-cars-right {
+
+        .model-car {
+          width: 100%;
+          //height: 140px;
+          padding: 15px 20px;
+          &.car-hidden-mobile {
+            display: none;
+          }
+        }
+      }
+
+      .item-modal-cars-mobile {
+        display: block;
+        margin-top: 30px;
+        .btn-dealer {
+          display: block;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;
+          padding: 14px 28px;
+        }
+      }
+    }
+
+    .container-business {
+      background-image: url($image-path + 'background-business-mobile.png');
+      height: 750px;
+      padding: 0 30px;
+      .business {
+        .item-business-left {
+          text-align: center;
+          margin-top: 90px;
+          .content {
+            font-size: 26px;
+            line-height: 35px;
+          }
+          .desc {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+
+        .item-business-right {
+          margin-top: 350px;
+          .content {
+            display: block;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: bold;
+            color: $white-default;
+          }
+          .image {
+            width: 20px;
+          }
+        }
+      }
+    }
+
+    .container-features {
+      padding: 0 20px;
+      .features {
+        .title {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 30px;
+        }
+        .wrap-item-collapse {
+          .item-collapse {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-page {
+    .container {
+      max-width: 1024px;
+    }
+  }
+}

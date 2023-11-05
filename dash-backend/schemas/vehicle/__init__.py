@@ -1,0 +1,20 @@
+from schemas.vehicle.price_vehicle_assignment import PriceVehicleAssignmentSchema
+from schemas.vehicle.price_vehicle_model_style_assignment import PriceVehicleModelStyleAssignmentSchema
+from schemas.vehicle.price_option_assignment import PriceOptionAssignmentSchema
+from schemas.vehicle.vehicle import VehicleSchema
+from schemas.vehicle.vehicle_attribute import VehicleAttributeSchema
+from schemas.vehicle.vehicle_attribute_value import VehicleAttributeValueSchema
+from schemas.vehicle.vehicle_brand import VehicleBrandSchema
+from schemas.vehicle.vehicle_custom_attribute import VehicleCustomAttributeSchema
+from schemas.vehicle.vehicle_custom_option_item import VehicleCustomOptionSchema
+from schemas.vehicle.vehicle_gallery_item import VehicleGalleryItemSchema
+from schemas.vehicle.vehicle_history import VehicleHistorySchema
+from schemas.vehicle.vehicle_model import VehicleModelSchema
+from schemas.vehicle.vehicle_model_style import VehicleModelStyleSchema
+from schemas.vehicle.vehicle_model_style_attribute import VehicleModelStyleAttributeSchema
+from schemas.vehicle.vehicle_option_item import VehicleOptionItemSchema
+from schemas.vehicle.vehicle_status import VehicleStatusSchema
+from schemas.vehicle.vehicle_year_model import VehicleYearModelSchema
+from schemas.vehicle.vehicle_year_model_attribute import VehicleYearModelAttributeSchema
+from schemas.vehicle.vehicle_feature import VehicleBodySchema, VehicleCategorySchema, VehicleDriveTrainSchema, \
+    VehicleEngineSchema, VehicleInfoSchema, VehicleTransmissionSchema, VehicleWarrantySchema

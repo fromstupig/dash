@@ -1,0 +1,4 @@
+<div class="pagination flex items-center justify-center flex-wrap">
+  <div class="pagination-result pr-3 mb-3 sm:mb-0">{{ currentStartItem }}-{{ currentEndItem }} / <span class="pagination-result-total">{{ total }} results</span></div>
+  <nz-pagination nzSize="default" [nzPageIndex]="page" [nzTotal]="total" [nzPageSize]="pageSize" (nzPageIndexChange)="onPageChangeIndex($event)"></nz-pagination>
+</div>

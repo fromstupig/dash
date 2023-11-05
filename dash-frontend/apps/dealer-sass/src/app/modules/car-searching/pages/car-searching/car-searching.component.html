@@ -1,0 +1,22 @@
+<div class="car-searching">
+  <div class="car-searching-banner">
+    <dash-searching-banner></dash-searching-banner>
+  </div>
+  <div class="car-searching-tool">
+    <dash-search-bar [total]="cars?.total"></dash-search-bar>
+  </div>
+  <div class="car-searching-list">
+    <dash-searching-result [cars]="cars?.items"></dash-searching-result>
+  </div>
+  <div class="car-searching-pagination" *ngIf="cars?.total > 0">
+    <dash-pagination [page]="page" [total]="cars?.total" (onPageChange)="onPageChange($event)"></dash-pagination>
+  </div>
+  <div class="car-searching-note px-3 lg:px-0">
+    <div class="container">
+      *MSRP sticker will include all the standard features of the vehicle, plus all the factory-installed options along with their price. The sticker also includes the fuel economy ratings and destination charge. Note that the MSRP does not include taxes, license, or registration fees.
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>

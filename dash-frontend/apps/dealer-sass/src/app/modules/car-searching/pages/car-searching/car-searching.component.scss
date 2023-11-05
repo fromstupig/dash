@@ -1,0 +1,17 @@
+@import '../../../../../assets/scss/_variables.scss';
+
+.car-searching {
+  &-list {
+    margin: 20px 0;
+  }
+  &-pagination {
+    display: block;
+    text-align: center;
+    margin: 60px 0 40px 0;
+  }
+  &-note {
+    font-size: 12px;
+    line-height: 16px;
+    columns: $color_semi_gray;
+  }
+}

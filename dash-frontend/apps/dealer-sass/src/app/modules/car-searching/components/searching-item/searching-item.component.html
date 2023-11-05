@@ -1,0 +1,84 @@
+<div class="searching-item cursor-pointer">
+  <div class="searching-item-content">
+    <div class="searching-item-content-image my-3">
+      <ng-container *ngIf="car?.vehicle_brand?.name; else noImage">
+        <img *ngIf="car?.avatar; else defaultImage" class="max-w-full mx-auto" [src]="car?.avatar" [alt]="car?.name" />
+      </ng-container>
+      <ng-template #defaultImage>
+        <img class="max-w-full mx-auto" src="/assets/images/car-searching/car-default.jpg" [alt]="car?.name" />
+      </ng-template>
+      <ng-template #noImage>
+        <nz-skeleton-element class="w-full" nzType="button" nzShape="large" [nzActive]="true" [nzSize]="120"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-item-content-model text-center">
+      <ng-container *ngIf="car?.vehicle_brand?.name; else noName">{{car?.vehicle_brand?.name}}</ng-container>
+      <ng-template #noModel>
+        <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-item-content-name text-center font-extrabold">
+      <ng-container *ngIf="car?.vehicle_model_style?.vehicle_year_model?.name; else noModel">{{car?.vehicle_model_style?.vehicle_year_model?.name}}</ng-container>
+      <ng-template #noName>
+        <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <!-- <div class="searching-item-content-exist text-center font-semibold">
+      <ng-container *ngIf="car?.total; else noTotal">{{ car?.total }} cars in stock</ng-container>
+      <ng-template #noTotal>
+        <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+      </ng-template>
+    </div> -->
+    <div class="searching-item-content-pricing text-center">
+      <ng-container *ngIf="car?.vehicle_model_style?.base_MSRP; else noPrice">From <span class="searching-item-content-pricing-detail font-bold">${{ car?.vehicle_model_style?.base_MSRP | number }}</span> MSRP*</ng-container>
+      <ng-template #noPrice>
+        <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-item-content-pricing-method text-center">
+      <ng-container *ngIf="car?.vehicle_brand?.name; else noPricingMethod">
+        <div>
+          <span><svg-icon src="/assets/images/common/un-lock.svg"></svg-icon></span>
+          <span class="searching-item-content-pricing-method-title">More pricing methods</span>
+        </div>
+      </ng-container>
+      <ng-template #noPricingMethod>
+        <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-item-content-color flex items-center justify-between">
+      <ng-container *ngIf="car?.vehicle_brand?.name; else noColor">
+        <div class="searching-item-content-color-exterior">
+          <div class="searching-item-content-color-exterior-preview mr-3" [ngStyle]="{'background': '#' + car?.exColor?.detail?.rgb1}"></div>
+          <div class="searching-item-content-color-exterior-name">{{ car?.exColor?.detail?.title }}</div>
+        </div>
+        <div class="searching-item-content-color-exterior">
+          <div class="searching-item-content-color-exterior-preview mr-3"></div>
+          <div class="searching-item-content-color-exterior-name">White Pearl</div>
+        </div>
+      </ng-container>
+      <ng-template #noColor>
+        <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-item-content-code">
+      <div class="searching-item-content-code-vin">
+        <ng-container *ngIf="car?.vehicle_brand?.name; else noVin">
+          <span class="font-bold pr-1">VIN</span> SALWR2RE5KA853803
+        </ng-container>
+        <ng-template #noVin>
+          <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+        </ng-template>
+      </div>
+      <div class="searching-item-content-code-vin flex items-center">
+        <ng-container *ngIf="car?.vehicle_brand?.name; else noStock">
+          <p class="pr-1 m-0"><span class="font-bold">STOCK</span> N7754A</p>
+          <p class="pr-1 m-0"><span class="font-bold">MODEL</span> {{car?.vehicle_model_style?.manufacture_code}}</p>
+        </ng-container>
+        <ng-template #noStock>
+          <nz-skeleton-element nzType="button" nzShape="large" [nzActive]="true"></nz-skeleton-element>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

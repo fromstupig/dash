@@ -1,0 +1,24 @@
+<div class="searching-modal-content grid grid-cols-3 lg:grid-cols-5">
+  <div
+    class="searching-modal-content-item flex items-center justify-center cursor-pointer"
+    *ngFor="let color of colors"
+    [ngClass]="{active: (currentColor.toString() === color?.detail?.code?.toString())}"
+    (click)="onSelectColor(color)"
+  >
+    <div class="searching-modal-content-item-color pr-1">
+      <div class="rounded-full searching-modal-content-item-color-round flex items-center justify-center" [ngStyle]="{background: color?.detail?.rgb1}" *ngIf="color?.detail?.rgb1; else noColor;"></div>
+      <ng-template #noColor>
+        <nz-skeleton-element nzType="avatar" [nzActive]="true" [nzSize]="20"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-modal-content-item-text pr-1 leading-none">
+      <span class="searching-modal-content-item-text-name" *ngIf="color?.detail?.title; else nameSk;">{{color?.detail?.title}}</span>
+      <ng-template #nameSk>
+        <nz-skeleton-element nzType="avatar" [nzActive]="true" [nzSize]="20"></nz-skeleton-element>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<div class="searching-modal-footer">
+  <button nz-button nzType="primary" class="font-bold searching-modal-submit" (click)="onFilter()">Save</button>
+</div>

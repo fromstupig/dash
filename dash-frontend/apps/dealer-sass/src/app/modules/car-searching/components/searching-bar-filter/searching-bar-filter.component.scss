@@ -1,0 +1,67 @@
+@import '../../../../../assets/scss/_variables.scss';
+
+.filter {
+  padding: 10px 17px;
+  @media screen and (max-width: 768px) {
+    padding: 15px 17px 0;
+  }
+  &-item {
+    background: $color_extra_white;
+    border-radius: 5px;
+    padding: 10px 17px;
+    margin-right: 20px;
+    &-title {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      color: color_black;
+      padding-right: 12px;
+    }
+    &-remove {
+      display: block;
+      line-height: 1;
+      i {
+        color: $color_blue;
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+  &-clear {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $color_blue;
+    @media screen and (max-width: 768px) {
+      padding: 5px 10px 0;
+    }
+  }
+  &-share {
+    background: $color_blue;
+    border-radius: 5px;
+    padding: 8px 19px;
+    i {
+      font-weight: 600;
+      text-align: center;
+      color: $color_white;
+      display: block;
+      padding-right: 13px;
+      font-size: 22px;
+      line-height: 1;
+    }
+    span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: center;
+      color: $color_white;
+    }
+    &-roll {
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        bottom: 10px;
+        left: 15px;
+      }
+    }
+  }
+}

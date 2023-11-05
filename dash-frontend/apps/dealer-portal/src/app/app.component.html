@@ -1,0 +1,52 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo"></div>
+    <ul nz-menu nzMode="inline" nzTheme="dark">
+      <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menus }"></ng-container>
+      <ng-template #menuTpl let-menus>
+        <ng-container *ngFor="let menu of menus">
+          <li
+            *ngIf="!menu.children"
+            nz-menu-item
+            [nzPaddingLeft]="menu.level * 24"
+            [nzDisabled]="menu.disabled"
+            [nzSelected]="menu.selected"
+            nzMatchRouter
+          >
+            <a routerLink="{{menu.link}}">
+              <i nz-icon [nzType]="menu.icon" *ngIf="menu.icon"></i>
+              <span>{{ menu.title }}</span>
+            </a>
+          </li>
+          <li
+            *ngIf="menu.children"
+            nz-submenu
+            [nzPaddingLeft]="menu.level * 24"
+            [nzTitle]="menu.title"
+            [nzIcon]="menu.icon"
+          >
+            <ul>
+              <ng-container *ngTemplateOutlet="menuTpl; context: { $implicit: menu.children }"></ng-container>
+            </ul>
+          </li>
+        </ng-container>
+      </ng-template>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+         (click)="isCollapsed = !isCollapsed"></i>
+    </nz-header>
+    <nz-content>
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>User</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div class="inner-content min-h-screen">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer>Dash ©2020 Implement By Angel Labs Team</nz-footer>
+  </nz-layout>
+</nz-layout>

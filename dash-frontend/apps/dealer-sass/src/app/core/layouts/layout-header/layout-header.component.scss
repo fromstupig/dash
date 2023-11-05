@@ -1,0 +1,200 @@
+.header {
+  padding: 10px 0;
+  @media screen and (max-width: 991px) {
+    padding: 17px 0;
+  }
+  &-searching {
+    margin-left: 67px;
+    &-area {
+      width: 230px;
+      position: relative;
+      background: #F6F6F6;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 10.5px 16px;
+      @media screen and (min-width: 1280px) {
+        width: 359px;
+      }
+      &-input {
+        input {
+          border: 0;
+          outline: none;
+          height: auto;
+          max-height: 30px;
+          padding-left: 21px;
+          background: transparent;
+          width: 100%;
+        }
+      }
+      &-markup {
+        position: absolute;
+        top: 13px;
+        left: 16px;
+      }
+    }
+    &-mobile {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      left: 0;
+      right: 0;
+      margin: 0;
+      background: #fff;
+      padding: 5px 15px;
+      display: none;
+      .header-searching-area {
+        width: 100%;
+      }
+      &.show {
+        display: block;
+      }
+    }
+    &-title {
+      margin-bottom: 20px;
+      &-text {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 27px;
+        color: #000000;
+      }
+    }
+    &-close {
+      color: #111;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-submission {
+      display: block;
+      margin-top: 15px;
+      &-button {
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+        background: #0084D0;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 10px;
+      }
+    }
+  }
+  &-dealer {
+    outline: none;
+    &-logo {
+      padding-right: 15px;
+    }
+    &-name {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #000000;
+      text-transform: uppercase;
+      padding-left: 15px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: #E5E5E5;
+        left: 0;
+      }
+    }
+  }
+  &-group {
+    &-action {
+      &-link, &-menu {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #353535;
+      }
+      &-link {
+        margin-right: 10px;
+      }
+    }
+  }
+  &-action {
+    display: none;
+    transition: all .4s ease-in-out;
+    @media screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 991px) {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background: #ffffff;
+      align-items: baseline;
+      padding: 20px 20px 0 20px;
+    }
+    &.show {
+      display: block;
+    }
+    &-link {
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      margin: 30px 0;
+      color: #353535;
+      @media screen and (min-width: 992px) {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 0 15px 0 0;
+      }
+      i {
+        font-size: 18px;
+      }
+    }
+    &-button {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      color: #FFFFFF;
+      background: #0084D0;
+      border-radius: 26px;
+      padding: 6.5px 22px;
+    }
+    &-menu {
+      color: #111111;
+      margin-left: 20px;
+      i {
+        font-size: 18px;
+      }
+    }
+    &-title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+::ng-deep {
+  .ant-drawer-open {
+    .header-drawer {
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      .ant-drawer-content {
+        border-radius: 7px;
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .header-action {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+}
+

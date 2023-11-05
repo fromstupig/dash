@@ -1,0 +1,20 @@
+<div class="suggestion">
+  <div class="suggestion-content flex items-center justify-center">
+    <div>
+      <div class="suggestion-content-title text-center">Don't find your car</div>
+      <div class="suggestion-content-link text-center font-extrabold cursor-pointer" (click)="showModalBuildCar()">Build your own car</div>
+    </div>
+  </div>
+</div>
+
+<nz-modal
+  nzWrapClassName="vertical-center-modal"
+  [(nzVisible)]="isShowModal"
+  nzTitle="Vertically centered modal dialog"
+  [nzFooter]="null"
+  (nzOnCancel)="isShowModal = false"
+>
+  <p>some contents...</p>
+  <p>some contents...</p>
+  <p>some contents...</p>
+</nz-modal>

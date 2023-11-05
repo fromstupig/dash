@@ -1,0 +1,75 @@
+@import '../../../../assets/scss/_variables.scss';
+
+.container-modal-build-own-car {
+  padding: 20px;
+  color: $black-default;
+
+  .image {
+    padding-top: 30px;
+    img {
+      height: 100%;
+      max-width: 320px;
+    }
+  }
+
+  .content {
+    .title {
+      font-weight: 800;
+      font-size: 30px;
+      line-height: 41px;
+      img {
+        height: 20px;
+        display: inline-block;
+      }
+    }
+
+    .context {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .button-apps {
+      img {
+        height: 40px;
+        width: auto;
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .container-modal-build-own-car {
+    padding: 0;
+    .image {
+      img {
+        margin: 0 auto;
+      }
+    }
+    .content {
+      .title {
+        display: inherit;
+        span {
+          text-align: center;
+          width: 100%;
+          display: inherit;;
+        }
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .context {
+        text-align: center;
+        padding: 0 10px;
+      }
+      .button-apps {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

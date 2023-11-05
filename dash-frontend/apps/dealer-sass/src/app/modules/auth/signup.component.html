@@ -1,0 +1,61 @@
+<nz-layout class="bg-transparent">
+  <div class="text-center bg-transparent my-5">
+    <p class="font-bold text-lg my-2">Register an account</p>
+    <p>Let's create an account to unlock more features</p>
+  </div>
+  <nz-content class="bg-transparent">
+    <form nz-form [formGroup]="formGroup" class="ant-advanced-search-form">
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-control>
+              <input class="rounded-lg" nz-input placeholder="Last name" formControlName="lastName" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+
+        <div nz-col [nzSpan]="12">
+          <nz-form-item>
+            <nz-form-control>
+              <input class="rounded-lg" nz-input placeholder="First name" formControlName="firstName" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="24">
+          <nz-form-item>
+            <nz-form-control>
+              <input class="rounded-lg" nz-input placeholder="Email" formControlName="email" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="24">
+          <nz-form-item>
+            <nz-form-control>
+              <input class="rounded-lg" nz-input placeholder="Password" formControlName="password" type="password" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="24">
+          <button nz-button nzType="primary" nzShape="round" nzSize="large"
+                  class="w-full" (click)="onSubmit()">Register
+          </button>
+        </div>
+      </div>
+    </form>
+  </nz-content>
+  <nz-footer class="text-center bg-transparent">
+    <p>Already have an account? <a (click)="onRedirectLogin()" class="underline font-bold">Sign in</a></p>
+    <p class="text-xs disclaimer my-2">By connecting, you agree to our <a href="#" class="underline">General Terms &
+      Conditions</a>
+      and <a href="#" class="underline">Privacy Policy</a></p>
+  </nz-footer>
+</nz-layout>

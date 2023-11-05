@@ -1,0 +1,60 @@
+.option-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.price-txt {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: #7b7b7b;
+
+  .small-txt {
+    font-size: 10px;
+  }
+
+  .super-small-txt {
+    font-size: 7px;
+    line-height: 14px;
+    color: #808080;
+  }
+}
+
+.highlight-txt {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.color-black-dash {
+  color: #111111;
+}
+
+.b-b-grey {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.radio-box {
+  padding: 10px 3px;
+  font-weight: 600;
+  // width: 105px;
+  height: 56px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+  margin-right: 5px;
+
+  span {
+    @media (max-width: 1024px) {
+      font-size: 9px;
+    }
+  }
+}
+[nz-radio-group] .radio-box:last-child {
+  margin-right: 0;
+}

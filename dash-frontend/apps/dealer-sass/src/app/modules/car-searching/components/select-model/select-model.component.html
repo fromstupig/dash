@@ -1,0 +1,31 @@
+<div class="searching-modal-content grid grid-cols-3 lg:grid-cols-5">
+  <div
+    class="searching-modal-content-item flex items-center justify-center cursor-pointer"
+    *ngFor="let model of models"
+    [ngClass]="{active: (currentModal.toString() === model?.id.toString())}"
+    (click)="onSelectModel(model)"
+  >
+    <div class="searching-modal-content-item-logo">
+      <dash-image
+        [src]="model?.galleries && model?.galleries[0] ? model?.galleries[0].asset_path : null"
+        [alt]="model?.name"
+        *ngIf="model?.name; else imageSk;"
+        loading="lazy"
+      ></dash-image>
+      <ng-template #imageSk>
+        <nz-skeleton-element nzType="avatar" [nzActive]="true" [nzSize]="20"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-modal-content-item-name">
+      <ng-container *ngIf="model?.name; else nameSk">
+        {{ model?.name }}
+      </ng-container>
+      <ng-template #nameSk>
+        <nz-skeleton-element nzType="input" [nzActive]="true" nzSize="small"></nz-skeleton-element>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<div class="searching-modal-footer" *ngIf="showFooter">
+  <button nz-button nzType="primary" class="font-bold searching-modal-submit" (click)="onFilter()">Save</button>
+</div>

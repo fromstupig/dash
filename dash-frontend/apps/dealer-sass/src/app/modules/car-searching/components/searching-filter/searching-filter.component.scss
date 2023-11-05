@@ -1,0 +1,103 @@
+::ng-deep {
+  .ant-collapse {
+    border: 0;
+    .ant-collapse-item {
+      border: 0;
+      background: #ffff;
+    }
+    .ant-collapse-content {
+      border: 0;
+    }
+  }
+  .searching-modal-content {
+    &-slider {
+      display: block;
+      height: 15px;
+      &-price {
+        &:last-child {
+          transform: translateX(33%);
+        }
+      }
+    }
+    .grid {
+      display: block;
+    }
+  }
+  .ant-slider-rail {
+    border-radius: 0;
+  }
+  .ant-slider:hover .ant-slider-track,
+  .ant-slider-track {
+    background-color: #2e566e;
+  }
+  .ant-slider-handle {
+    background-color: #0084d0 !important;
+    border: 0;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 16px 16px 25px;
+  }
+  .ant-modal-body  {
+    padding-top: 0;
+  }
+  .ant-collapse-icon-position-right>.ant-collapse-item>.ant-collapse-header {
+    padding: 18px 40px 16px 16px;
+  }
+}
+.filter-header {
+  &-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+  }
+  &-mark {
+    font-size: 13px;
+    line-height: 19px;
+    color: #808991;
+  }
+}
+.searching-filter {
+  &-content {
+    overflow-y: auto;
+    height: calc(100vh - 112px);
+  }
+  &-footer {
+    padding: 0 15px;
+    button {
+      font-size: 14px;
+      line-height: 19px;
+      color: #22313F;
+      text-align: center;
+      border-radius: 10px;
+      padding: 9px 53px;
+      &.submit {
+        font-size: 16px;
+        line-height: 22px;
+        background: #0084D0;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+.list-make-car {
+  &-item {
+    display: flex;
+    align-items: center;
+    color: #808991;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 14px;
+    position: relative;
+    &.active {
+      color: #0084D0;
+      &:after {
+        content: 'L';
+        -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
+        -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
+        transform: scaleX(-1) rotate(-35deg);
+      }
+    }
+  }
+}

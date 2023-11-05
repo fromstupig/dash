@@ -1,0 +1,150 @@
+<form [formGroup]="formSearch">
+<div class="search-bar">
+  <div class="container font-nunito">
+    <div class="bg-black flex items-center justify-between search-bar-container flex-wrap">
+      <div class="search-bar-left flex items-center flex-wrap justify-center sm:justify-start">
+        <span nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu" class="search-bar-left-select font-extrabold text-center flex items-center uppercase">
+          <span class="pr-4">{{ searchType === 'NEW' ? 'New Cars' : 'Old Cars' }}</span>
+          <i nz-icon nzType="down"></i>
+        </span>
+        <div *ngIf="!(isMobile$ | async)">
+          <div class="search-bar-left-filter flex items-center flex-wrap justify-center sm:justify-start">
+            <span class="search-bar-left-filter-item" (click)="openModal('body')">
+              <span class="search-bar-left-filter-item-title flex items-center">
+                <span class="search-bar-left-filter-item-title-text font-semibold text-center pr-3">Body Type</span>
+                <i nz-icon nzType="down"></i>
+              </span>
+            </span>
+            <span class="search-bar-left-filter-item" (click)="openModal('price')">
+              <span class="search-bar-left-filter-item-title flex items-center">
+                <span class="search-bar-left-filter-item-title-text font-semibold text-center pr-3">Price Range</span>
+                <i nz-icon nzType="down"></i>
+              </span>
+            </span>
+            <span class="search-bar-left-filter-separate"></span>
+            <span class="search-bar-left-filter-item" (click)="openModal('branch')">
+              <span class="search-bar-left-filter-item-title flex items-center">
+                <span class="search-bar-left-filter-item-title-text font-semibold text-center pr-3">Make</span>
+                <i nz-icon nzType="down"></i>
+              </span>
+            </span>
+            <span
+              class="search-bar-left-filter-item"
+              (click)="openModal('model')"
+              nz-popover
+              nzPopoverTitle=""
+              [nzPopoverVisible]="false"
+              [nzPopoverTrigger]="'click'"
+              [nzPopoverContent]="formSearch?.get('branch').value ? '' : 'Please choose branch first'"
+            >
+              <span class="search-bar-left-filter-item-title flex items-center">
+                <span class="search-bar-left-filter-item-title-text font-semibold text-center pr-3">Model</span>
+                <i nz-icon nzType="down"></i>
+              </span>
+            </span>
+            <span
+              class="search-bar-left-filter-item"
+              (click)="openModal('year')"
+              nz-popover
+              nzPopoverTitle=""
+              [nzPopoverVisible]="false"
+              nzPopoverTrigger="click"
+              [nzPopoverContent]="formSearch?.get('model').value ? '' : 'Please choose model first'"
+            >
+              <span class="search-bar-left-filter-item-title flex items-center">
+                <span class="search-bar-left-filter-item-title-text font-semibold text-center pr-3">Year</span>
+                <i nz-icon nzType="down"></i>
+              </span>
+            </span>
+            <span class="search-bar-left-filter-separate"></span>
+            <span
+              class="search-bar-left-filter-item"
+              (click)="openModal('color')"
+              nz-popover
+              nzPopoverTitle=""
+              [nzPopoverVisible]="false"
+              nzPopoverTrigger="click"
+              [nzPopoverContent]="formSearch?.get('year').value ? '' : 'Please choose year first'"
+            >
+              <span class="search-bar-left-filter-item-title flex items-center">
+                <span class="search-bar-left-filter-item-title-text font-semibold text-center pr-3">Exterior Color</span>
+                <i nz-icon nzType="down"></i>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="search-bar-right">
+        <div class="search-bar-right-container flex items-center justify-center sm:justify-start">
+          <div class="search-bar-right-container-result font-bold sm:pr-4">{{ total }} results</div>
+          <div class="search-bar-right-container-result" *ngIf="!(isMobile$ | async)">
+            <span nz-dropdown nzTrigger="click" [nzDropdownMenu]="sortMenu" class="flex items-center">
+              sort by <span class="pl-1 font-bold">{{ sortType }}</span>
+              <i class="pl-2" nz-icon nzType="down"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between search-bar-container bg-white flex-wrap border-bot" *ngIf="(isMobile$ | async)">
+      <div class="search-bar-left">
+        <div class="search-bar-left-filter-tick flex items-center" (click)="openModal('filter')">
+          <svg-icon src="/assets/images/icons/filter.svg"></svg-icon>
+          <span class="search-bar-left-filter-tick-text">Filters</span>
+          <i nz-icon nzType="down" nzTheme="outline"></i>
+        </div>
+      </div>
+      <div class="search-bar-right color-text-black">
+        <span nz-dropdown nzTrigger="click" [nzDropdownMenu]="sortMenu" class="flex items-center">
+          sort by <span class="pl-1 font-bold">{{ sortType }}</span>
+          <i class="pl-2" nz-icon nzType="down"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <ul nz-menu class="p-0 font-nunito rounded">
+    <li nz-menu-item class="px-2 py-2 select-car-item rounded">New Car</li>
+    <li nz-menu-item class="px-2 py-2 select-car-item rounded">Old Car</li>
+  </ul>
+</nz-dropdown-menu>
+<nz-dropdown-menu #sortMenu="nzDropdownMenu">
+  <ul nz-menu class="p-0 font-nunito rounded">
+    <li nz-menu-item class="px-2 py-2 select-car-item rounded" (click)="sortType = 'Model'">sort by model</li>
+    <li nz-menu-item class="px-2 py-2 select-car-item rounded" (click)="sortType = 'Popular'">most popular</li>
+    <li nz-menu-item class="px-2 py-2 select-car-item rounded" (click)="sortType = 'Lowest Price'">lowest price</li>
+    <li nz-menu-item class="px-2 py-2 select-car-item rounded" (click)="sortType = 'Highest Price'">highest price</li>
+  </ul>
+</nz-dropdown-menu>
+<nz-modal
+  [nzVisible]="modalName !== ''"
+  (nzOnCancel)="handleCloseModal()"
+  [nzTitle]="modalTitle"
+  [nzContent]="modalSelectBranch"
+  [nzFooter]="null"
+  [nzCloseOnNavigation]="true"
+  nzClassName="full-rounded modal-rounded font-nunito"
+  nzWidth="900px"
+  nzWrapClassName="vertical-center-modal"
+>
+  <ng-template #modalTitle>
+    <h3 class="font-extrabold searching-modal-title">{{ titles[modalName] }}</h3>
+  </ng-template>
+  <ng-template #modalSelectBranch>
+    <ng-container [ngSwitch]="modalName">
+      <dash-select-branch *ngSwitchCase="'branch'" [branches]="data?.branch | async" [filter]="formSearch?.get('branch')?.value" (onBranchChage)="onFilterChange('branch', $event)"></dash-select-branch>
+      <dash-select-model *ngSwitchCase="'model'" [models]="data?.model | async" [filter]="formSearch?.get('model')?.value" (onModelChange)="onFilterChange('model', $event)"></dash-select-model>
+      <dash-select-year *ngSwitchCase="'year'" [years]="data?.year | async" [filter]="formSearch?.get('year')?.value" (onYearChange)="onFilterChange('year', $event)"></dash-select-year>
+      <dash-select-body-type *ngSwitchCase="'body'" [bodies]="data?.body | async" [filter]="formSearch?.get('body')?.value" (onBodyTypeChange)="onFilterChange('body', $event)"></dash-select-body-type>
+      <dash-select-price-range *ngSwitchCase="'price'" [defaultPrice]="formSearch?.get('price')?.value" (onPriceChange)="onFilterChange('price', $event)"></dash-select-price-range>
+      <dash-select-color *ngSwitchCase="'color'" [colors]="data?.color | async" [filter]="formSearch?.get('color')?.value" (onColorChage)="onFilterChange('color', $event)"></dash-select-color>
+      <dash-searching-filter *ngSwitchCase="'filter'" [data]="data" [formValue]="formSearch?.value" (onFilterChange)="onFilterMobileChange($event)"></dash-searching-filter>
+      <p *ngSwitchDefault></p>
+    </ng-container>
+  </ng-template>
+</nz-modal>
+<div class="car-searching-filter">
+  <dash-searching-bar-filter [filters]="formSearch.value" (removeFilter)="onRemoveFilter($event)"></dash-searching-bar-filter>
+</div>
+</form>

@@ -1,0 +1,26 @@
+<div class="searching-modal-content grid grid-cols-3 lg:grid-cols-5">
+  <div
+    class="searching-modal-content-item flex items-center justify-center cursor-pointer"
+    *ngFor="let body of bodies"
+    (click)="onSelectBodyType(body)"
+    [ngClass]="{active: (currentBodyType.toString() === body?.id?.toString())}"
+  >
+    <div class="searching-modal-content-item-text pr-1 leading-none">
+      <span class="searching-modal-content-item-text-name" *ngIf="body?.name; else nameSk;">{{body?.name}}</span>
+      <ng-template #nameSk>
+        <nz-skeleton-element nzType="avatar" [nzActive]="true" [nzSize]="20"></nz-skeleton-element>
+      </ng-template>
+    </div>
+    <div class="searching-modal-content-item-text-box leading-none">
+      <!-- <ng-container *ngIf="body?.total >= 0; else bodySk;">
+        ({{ body?.total }} {{body?.total > 1 ? 'cars' : 'car'}})
+      </ng-container>
+      <ng-template #bodySk>
+        <nz-skeleton-element nzType="input" [nzActive]="true" nzSize="small"></nz-skeleton-element>
+      </ng-template> -->
+    </div>
+  </div>
+</div>
+<div class="searching-modal-footer" *ngIf="showFooter">
+  <button nz-button nzType="primary" class="font-bold searching-modal-submit" (click)="onFilter()">Save</button>
+</div>

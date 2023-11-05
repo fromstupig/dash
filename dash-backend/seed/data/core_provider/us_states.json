@@ -1,0 +1,297 @@
+[
+  {
+    "name": "Alabama",
+    "code": "AL",
+    "region": "South"
+  },
+  {
+    "name": "Alaska",
+    "code": "AK",
+    "region": "West"
+  },
+  {
+    "name": "American Samoa",
+    "code": "AS",
+    "region": ""
+  },
+  {
+    "name": "Arizona",
+    "code": "AZ",
+    "region": "West"
+  },
+  {
+    "name": "Arkansas",
+    "code": "AR",
+    "region": "South"
+  },
+  {
+    "name": "California",
+    "code": "CA",
+    "region": "West"
+  },
+  {
+    "name": "Colorado",
+    "code": "CO",
+    "region": "West"
+  },
+  {
+    "name": "Connecticut",
+    "code": "CT",
+    "region": "Northeast"
+  },
+  {
+    "name": "Delaware",
+    "code": "DE",
+    "region": "South"
+  },
+  {
+    "name": "District Of Columbia",
+    "code": "DC",
+    "region": "South"
+  },
+  {
+    "name": "Federated States Of Micronesia",
+    "code": "FM",
+    "region": ""
+  },
+  {
+    "name": "Florida",
+    "code": "FL",
+    "region": "South"
+  },
+  {
+    "name": "Georgia",
+    "code": "GA",
+    "region": "South"
+  },
+  {
+    "name": "Guam",
+    "code": "GU",
+    "region": ""
+  },
+  {
+    "name": "Hawaii",
+    "code": "HI",
+    "region": "West"
+  },
+  {
+    "name": "Idaho",
+    "code": "ID",
+    "region": "West"
+  },
+  {
+    "name": "Illinois",
+    "code": "IL",
+    "region": "MidWest"
+  },
+  {
+    "name": "Indiana",
+    "code": "IN",
+    "region": "MidWest"
+  },
+  {
+    "name": "Iowa",
+    "code": "IA",
+    "region": "MidWest"
+  },
+  {
+    "name": "Kansas",
+    "code": "KS",
+    "region": "MidWest"
+  },
+  {
+    "name": "Kentucky",
+    "code": "KY",
+    "region": "South"
+  },
+  {
+    "name": "Louisiana",
+    "code": "LA",
+    "region": "South"
+  },
+  {
+    "name": "Maine",
+    "code": "ME",
+    "region": "Northeast"
+  },
+  {
+    "name": "Marshall Islands",
+    "code": "MH",
+    "region": ""
+  },
+  {
+    "name": "Maryland",
+    "code": "MD",
+    "region": "South"
+  },
+  {
+    "name": "Massachusetts",
+    "code": "MA",
+    "region": "Northeast"
+  },
+  {
+    "name": "Michigan",
+    "code": "MI",
+    "region": "MidWest"
+  },
+  {
+    "name": "Minnesota",
+    "code": "MN",
+    "region": "MidWest"
+  },
+  {
+    "name": "Mississippi",
+    "code": "MS",
+    "region": "South"
+  },
+  {
+    "name": "Missouri",
+    "code": "MO",
+    "region": "MidWest"
+  },
+  {
+    "name": "Montana",
+    "code": "MT",
+    "region": "West"
+  },
+  {
+    "name": "Nebraska",
+    "code": "NE",
+    "region": "MidWest"
+  },
+  {
+    "name": "Nevada",
+    "code": "NV",
+    "region": "West"
+  },
+  {
+    "name": "New Hampshire",
+    "code": "NH",
+    "region": "Northeast"
+  },
+  {
+    "name": "New Jersey",
+    "code": "NJ",
+    "region": "Northeast"
+  },
+  {
+    "name": "New Mexico",
+    "code": "NM",
+    "region": "West"
+  },
+  {
+    "name": "New York",
+    "code": "NY",
+    "region": "Northeast"
+  },
+  {
+    "name": "North Carolina",
+    "code": "NC",
+    "region": "South"
+  },
+  {
+    "name": "North Dakota",
+    "code": "ND",
+    "region": "MidWest"
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "code": "MP",
+    "region": ""
+  },
+  {
+    "name": "Ohio",
+    "code": "OH",
+    "region": "MidWest"
+  },
+  {
+    "name": "Oklahoma",
+    "code": "OK",
+    "region": "South"
+  },
+  {
+    "name": "Oregon",
+    "code": "OR",
+    "region": "West"
+  },
+  {
+    "name": "Palau",
+    "code": "PW",
+    "region": ""
+  },
+  {
+    "name": "Pennsylvania",
+    "code": "PA",
+    "region": "Northeast"
+  },
+  {
+    "name": "Puerto Rico",
+    "code": "PR",
+    "region": ""
+  },
+  {
+    "name": "Rhode Island",
+    "code": "RI",
+    "region": "Northeast"
+  },
+  {
+    "name": "South Carolina",
+    "code": "SC",
+    "region": "South"
+  },
+  {
+    "name": "South Dakota",
+    "code": "SD",
+    "region": "MidWest"
+  },
+  {
+    "name": "Tennessee",
+    "code": "TN",
+    "region": "South"
+  },
+  {
+    "name": "Texas",
+    "code": "TX",
+    "region": "South"
+  },
+  {
+    "name": "Utah",
+    "code": "UT",
+    "region": "West"
+  },
+  {
+    "name": "Vermont",
+    "code": "VT",
+    "region": "Northeast"
+  },
+  {
+    "name": "Virgin Islands",
+    "code": "VI",
+    "region": ""
+  },
+  {
+    "name": "Virginia",
+    "code": "VA",
+    "region": "South"
+  },
+  {
+    "name": "Washington",
+    "code": "WA",
+    "region": "West"
+  },
+  {
+    "name": "West Virginia",
+    "code": "WV",
+    "region": "South"
+  },
+  {
+    "name": "Wisconsin",
+    "code": "WI",
+    "region": "MidWest"
+  },
+  {
+    "name": "Wyoming",
+    "code": "WY",
+    "region": "West"
+  }
+]

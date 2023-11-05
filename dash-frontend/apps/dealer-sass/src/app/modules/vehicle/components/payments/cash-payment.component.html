@@ -1,0 +1,23 @@
+<nz-layout class="bg-transparent">
+  <div nz-row class="bg-white overview" [class.h-16]="loading"
+       [class.text-center]="loading">
+    <div nz-col nzSpan="3" class="option-title">
+      <span class="align-top" [class.underline]="editMode">Cash</span>
+    </div>
+    <nz-spin nzSimple *ngIf="loading" class="w-full"></nz-spin>
+    <div nz-col nzSpan="21" class="pb-2 price-txt" *ngIf="!loading">
+      <p>
+        <i nz-icon nzType="info-circle"></i>&nbsp;
+        <span class="text-blue-400 highlight-txt">{{ dealInformation!.pricing.msrp | currency}}</span>
+      </p>
+      <p class="small-txt">
+        <i nz-icon nzType="info-circle"></i> Rebate & discount: {{dealInformation!.pricing.dealerDiscount | currency}}
+      </p>
+      <p class="highlight-txt color-black-dash">MSRP: {{ dealInformation!.pricing.msrp | currency}}</p>
+      <p class="super-small-txt">Offer expires on {{dealInformation!.expirationDate | date}}</p>
+    </div>
+  </div>
+</nz-layout>
+
+
+

@@ -1,0 +1,258 @@
+<div nz-row class="px-6 py-4 bg-white vehicle-card">
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="17" nzXl="17" class="p-3">
+    <dash-vehicle-deatail-header
+      [modelName]="vehicle.name"
+      [modelCode]="vehicle.manufacture_code"
+    ></dash-vehicle-deatail-header>
+
+    <div nz-row>
+      <div nz-col nzSpan="24">
+        <nz-tabset
+          [nzTabPosition]="'bottom'"
+          (nzSelectChange)="handleTabChange()"
+        >
+          <nz-tab [nzTitle]="titleExteriorTemplate">
+            <ng-template #titleExteriorTemplate>
+              <div class="view-360-btn p-2">
+                <p>360</p>
+                <p>Exterior</p>
+                <i nz-icon
+                >
+                  <svg-icon src="./assets/icons/360-btn.svg"></svg-icon
+                  >
+                </i>
+              </div>
+            </ng-template>
+
+            <dash-vehicle-image-slider
+              [imageUrls]="exteriors"
+            ></dash-vehicle-image-slider>
+          </nz-tab>
+
+          <nz-tab [nzTitle]="titleInteriorTemplate">
+            <ng-template #titleInteriorTemplate>
+              <div class="view-360-btn p-2 bg-dark-blue">
+                <p>360</p>
+                <p>Interior</p>
+                <i nz-icon
+                >
+                  <svg-icon src="./assets/icons/360-btn.svg"></svg-icon
+                  >
+                </i>
+              </div>
+            </ng-template>
+            <dash-vehicle-image-slider
+              *ngIf="isTabSelect"
+              [imageUrls]="interiors"
+            ></dash-vehicle-image-slider>
+          </nz-tab>
+        </nz-tabset>
+      </div>
+    </div>
+  </div>
+
+  <div
+    nz-col
+    nzXs="24"
+    nzSm="24"
+    nzMd="7"
+    nzLg="7"
+    nzXl="7"
+    class="bg-gray-dash b-r-20 p-2"
+  >
+    <p class="option-txt my-2">Payment options</p>
+    <div class="p-2 bg-white rounded my-2"
+         (click)="onSelectPaymentMethod(dealType.Lease)"
+         [ngClass]="{'selected': paymentOptions.current == dealType.Lease}"
+    >
+      <dash-vehicle-lease-payment
+        [(dealInformation)]="paymentOptions[dealType.Lease]"
+        [editMode]="paymentOptions.current == dealType.Lease"
+        (dealInformationChange)="onPaymentUpdate()"
+      ></dash-vehicle-lease-payment>
+    </div>
+
+    <div class="p-2 bg-white rounded my-2"
+         (click)="onSelectPaymentMethod(dealType.Finance)"
+         [ngClass]="{'selected': paymentOptions.current == dealType.Finance}">
+      <dash-finance-payment [(dealInformation)]="paymentOptions[dealType.Finance]"
+                            [editMode]="paymentOptions.current == dealType.Finance"
+                            (dealInformationChange)="onPaymentUpdate()">
+      </dash-finance-payment>
+    </div>
+
+    <div class="p-2 bg-white rounded my-2"
+         [ngClass]="{'selected': paymentOptions.current == dealType.Cash}"
+         (click)="onSelectPaymentMethod(dealType.Cash)">
+      <dash-cash-payment
+        [(dealInformation)]="paymentOptions[dealType.Cash]"
+        (dealInformationChange)="onPaymentUpdate()"
+        [editMode]="paymentOptions.current == dealType.Cash">
+      </dash-cash-payment>
+    </div>
+  </div>
+</div>
+
+<div nz-row class="vehicle-foot bg-white">
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="17" nzXl="17">
+    <div nz-row class="info-box mr-2">
+      <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="6" nzXl="6">
+        <dash-vehicle-feature-col
+          [name]="'Black Cloth Perfromance'"
+          [iconPath]="'./assets/icons/dot-filled.svg'"
+        ></dash-vehicle-feature-col>
+        <dash-vehicle-feature-col
+          [name]="'EPA Estimated: 5km/l'"
+          [iconPath]="'./assets/icons/dot-non-filled.svg'"
+        ></dash-vehicle-feature-col>
+      </div>
+
+      <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="6" nzXl="6">
+        <dash-vehicle-feature-col
+          [name]="'253 hp'"
+          [iconPath]="'./assets/icons/hp.svg'"
+        ></dash-vehicle-feature-col>
+        <dash-vehicle-feature-col
+          [name]="'Front-Wheel Drive'"
+          [iconPath]="'./assets/icons/front.svg'"
+        ></dash-vehicle-feature-col>
+      </div>
+
+      <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="6" nzXl="6">
+        <dash-vehicle-feature-col
+          [name]="vehicle.transmissions[0].label"
+          [iconPath]="'./assets/icons/hp.svg'"
+        ></dash-vehicle-feature-col>
+        <dash-vehicle-feature-col
+          [name]="'Sedan'"
+          [iconPath]="'./assets/icons/sedan.svg'"
+        ></dash-vehicle-feature-col>
+      </div>
+
+      <div
+        nz-col
+        nzXs="12"
+        nzSm="12"
+        nzMd="12"
+        nzLg="6"
+        nzXl="6"
+        class="btn-group"
+      >
+        <div nz-row>
+          <button
+            nz-button
+            nzType="default"
+            nzShape="round"
+            (click)="showAllFeatureModal()"
+          >
+            ALL FEATURES
+          </button>
+        </div>
+
+        <div nz-row class="mt-2">
+          <button nz-button nzType="primary" nzShape="round">
+            BUILD YOUR OWN
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    nz-col
+    nzXs="24"
+    nzSm="24"
+    nzMd="24"
+    nzLg="7"
+    nzXl="7"
+    class="bg-black text-white b-r-20 p-2 flex flex-wrap p-5 group-next"
+  >
+    <div nz-row class="w-full items-center">
+      <div nz-col nzSpan="16" class="content-center">
+        <p>{{msrp | currency}} MSRP &nbsp;&nbsp; <i nz-icon nzType="info-circle"></i></p>
+        <p class="text-lg" *ngIf="paymentOptions.current != dealType.Cash">
+          {{ term | currency }}/month <a class="price-btn" href="">Price detail</a>
+        </p>
+      </div>
+      <div nz-col nzSpan="8" class="self-center">
+        <button nz-button nzType="primary" nzShape="round" class="float-right"
+                (click)="onNextStep()" [nzLoading]="isSubmitting">
+          Next<i nz-icon nzType="right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #signup>
+  <dash-signup (submitForm)="onSignUp($event)" (redirectLogin)="showLoginDialog()"></dash-signup>
+</ng-template>
+
+<ng-template #signin>
+  <dash-signin (submitForm)="onSignIn($event)" (redirectSignup)="showSignupDialog()"></dash-signin>
+</ng-template>
+
+<nz-modal
+  [(nzVisible)]="isAllFeatureModal"
+  (nzOnCancel)="handleCancelModal()"
+  [nzTitle]="modalTitle"
+  [nzFooter]="null"
+  nzClassName="full-rounded modal-rounded font-nunito"
+  nzWidth="800px"
+>
+  <ng-template #modalTitle>
+    <h3 class="font-extrabold">
+      All Features
+    </h3>
+  </ng-template>
+
+  <div nz-row class="all-features-info-box">
+    <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="8" nzXl="8">
+      <dash-vehicle-feature-col
+        [name]="'Black Cloth Perfromance'"
+        [iconPath]="'./assets/icons/dot-filled.svg'"
+      ></dash-vehicle-feature-col>
+      <dash-vehicle-feature-col
+        [name]="'EPA Estimated: 5km/l'"
+        [iconPath]="'./assets/icons/dot-non-filled.svg'"
+      ></dash-vehicle-feature-col>
+    </div>
+
+    <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="8" nzXl="8">
+      <dash-vehicle-feature-col
+        [name]="'253 hp'"
+        [iconPath]="'./assets/icons/hp.svg'"
+      ></dash-vehicle-feature-col>
+      <dash-vehicle-feature-col
+        [name]="'Front-Wheel Drive'"
+        [iconPath]="'./assets/icons/front.svg'"
+      ></dash-vehicle-feature-col>
+    </div>
+
+    <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="8" nzXl="8">
+      <dash-vehicle-feature-col
+        [name]="vehicle.transmissions[0].label"
+        [iconPath]="'./assets/icons/hp.svg'"
+      ></dash-vehicle-feature-col>
+      <dash-vehicle-feature-col
+        [name]="'Sedan'"
+        [iconPath]="'./assets/icons/sedan.svg'"
+      ></dash-vehicle-feature-col>
+    </div>
+  </div>
+
+  <div
+    nz-row
+    class="all-features-content mt-4"
+    *ngFor="let feature of vehicle?.standard_feature | keyvalue"
+  >
+    <div nz-col nzSpan="24">
+      <p>
+        <b>{{ feature.key }}</b>
+      </p>
+      <p *ngFor="let item of feature.value | keyvalue">
+        {{ item.key }}:{{ item.value }}
+      </p>
+    </div>
+  </div>
+</nz-modal>

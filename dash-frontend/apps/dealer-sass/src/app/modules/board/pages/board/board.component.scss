@@ -1,0 +1,52 @@
+@import "../../../../../assets/scss/_variables.scss";
+
+.board-banner {
+  background-image: url('/assets/images/car-searching/banner-background.svg');
+  background-color: $color_white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $color_white;
+  padding: 20px 0 75px 0;
+  @media screen and (min-width: 992px) {
+    padding: 183px 0 97px 0;
+  }
+  &-power {
+    position: absolute;
+    font-size: 16px;
+    line-height: 22px;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    @media screen and (min-width: 992px) {
+      bottom: -80px;
+      right: 0;
+      margin: 0 0;
+      text-align: right;
+    }
+  }
+  &-breadcrum {
+    line-height: 19px;
+  }
+  &-title {
+    padding-top: 60px;
+    font-size: 30px;
+    line-height: 41px;
+    @media screen and (min-width: 992px) {
+      padding-top: 13px;
+      font-size: 48px;
+      line-height: 65px;
+    }
+  }
+  &-description {
+    padding-top: 9px;
+    font-size: 16px;
+    line-height: 22px;
+    @media screen and (min-width: 992px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="searching-result">
+  <div class="container">
+    <div class="searching-result-grid grid" *ngIf="cars && cars.length > 0; else emptyResult;">
+      <div class="searching-result-item" *ngFor="let car of cars;" [routerLink]="'/vehicle/' + car?.vehicle_model_style?.id">
+        <dash-searching-item [car]="car"></dash-searching-item>
+      </div>
+      <div class="searching-result-item last">
+        <dash-sugesstion class="block"></dash-sugesstion>
+      </div>
+    </div>
+    <ng-template #emptyResult>
+      <div class="searching-result-finder">
+        <div class="searching-result-finder-content">
+          <div class="searching-result-finder-content-title">No result found</div>
+          <div class="searching-result-finder-content-action">
+            <button class="mr-0 md:mr-3 mb-3 md:mb-0" nz-button (click)="resetFilter()">Show all vehicles</button>
+            <button nz-button (click)="openModalBuild()">Build your own car</button>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "/cloudfront": {
+    "target": "https://dbhdyzvm8lm25.cloudfront.net",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": { "^/cloudfront_image": "" },
+    "logLevel": "debug"
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../assets/scss/_variables.scss';
+.border-bottom-box {
+  border-bottom: 1px solid $color_semi_black;
+}
+
+.gutter-row {
+  p:first-child {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 475px) {
+  .ant-layout-footer::ng-deep {
+    padding: 20px;
+  }
+
+  .icon-socials {
+    a:first-child {
+      margin-left: -10px;
+    }
+  }
+}

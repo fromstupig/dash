@@ -1,0 +1,680 @@
+{
+  "version": 1,
+  "projects": {
+    "dealer-sass": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/dealer-sass",
+      "sourceRoot": "apps/dealer-sass/src",
+      "prefix": "dash",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "extraWebpackConfig": "webpack.config.js",
+            "outputPath": "dist/dealer-sass/browser",
+            "index": "apps/dealer-sass/src/index.html",
+            "main": "apps/dealer-sass/src/main.ts",
+            "polyfills": "apps/dealer-sass/src/polyfills.ts",
+            "tsConfig": "apps/dealer-sass/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/dealer-sass/src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "./apps/dealer-sass/src/assets/",
+                "output": "./assets"
+              },
+              "apps/dealer-sass/src/assets"
+            ],
+            "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "apps/dealer-sass/src/styles.scss"
+            ],
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "apps/dealer-sass/src/assets/scss"
+              ]
+            }
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dealer-sass/src/environments/environment.ts",
+                  "with": "apps/dealer-sass/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "extraWebpackConfig": "webpack.config.js",
+            "browserTarget": "dealer-sass:build",
+            "proxyConfig": "proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dealer-sass:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "dealer-sass:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dealer-sass/tsconfig.app.json",
+              "apps/dealer-sass/tsconfig.spec.json",
+              "apps/dealer-sass/tsconfig.server.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dealer-sass/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/dealer-sass/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/apps/dealer-sass/server",
+            "main": "apps/dealer-sass/src/main.server.ts",
+            "tsConfig": "apps/dealer-sass/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "apps/dealer-sass/src/environments/environment.ts",
+                  "with": "apps/dealer-sass/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        }
+      }
+    },
+    "dealer-sass-e2e": {
+      "root": "apps/dealer-sass-e2e",
+      "sourceRoot": "apps/dealer-sass-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/dealer-sass-e2e/cypress.json",
+            "tsConfig": "apps/dealer-sass-e2e/tsconfig.e2e.json",
+            "devServerTarget": "dealer-sass:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "dealer-sass:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dealer-sass-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dealer-sass-e2e/**/*"
+            ]
+          }
+        }
+      }
+    },
+    "dealer-ssr": {
+      "root": "apps/dealer-ssr",
+      "sourceRoot": "apps/dealer-ssr/src",
+      "projectType": "application",
+      "prefix": "dealer-ssr",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/dealer-ssr",
+            "main": "apps/dealer-ssr/src/main.ts",
+            "tsConfig": "apps/dealer-ssr/tsconfig.app.json",
+            "assets": [
+              "apps/dealer-ssr/src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/dealer-ssr/src/environments/environment.ts",
+                  "with": "apps/dealer-ssr/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "dealer-ssr:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dealer-ssr/tsconfig.app.json",
+              "apps/dealer-ssr/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dealer-ssr/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/dealer-ssr/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "serve-all": {
+          "builder": "@angular-devkit/architect:concat",
+          "options": {
+            "targets": [
+              {
+                "target": "dealer-sass:build"
+              },
+              {
+                "target": "dealer-sass:server"
+              },
+              {
+                "target": "dealer-ssr:serve"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "di-landing": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/di-landing",
+      "sourceRoot": "apps/di-landing/src",
+      "prefix": "dash",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "extraWebpackConfig": "webpack.config.js",
+            "outputPath": "dist/apps/di-landing",
+            "index": "apps/di-landing/src/index.html",
+            "main": "apps/di-landing/src/main.ts",
+            "polyfills": "apps/di-landing/src/polyfills.ts",
+            "tsConfig": "apps/di-landing/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/di-landing/src/favicon.ico",
+              "apps/di-landing/src/assets"
+            ],
+            "styles": [
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "apps/di-landing/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/di-landing/src/environments/environment.ts",
+                  "with": "apps/di-landing/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "extraWebpackConfig": "webpack.config.js",
+            "browserTarget": "di-landing:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "di-landing:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "di-landing:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/di-landing/tsconfig.app.json",
+              "apps/di-landing/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/di-landing/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/di-landing/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "di-landing-e2e": {
+      "root": "apps/di-landing-e2e",
+      "sourceRoot": "apps/di-landing-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/di-landing-e2e/cypress.json",
+            "tsConfig": "apps/di-landing-e2e/tsconfig.e2e.json",
+            "devServerTarget": "di-landing:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "di-landing:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/di-landing-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/di-landing-e2e/**/*"
+            ]
+          }
+        }
+      }
+    },
+    "types": {
+      "root": "libs/types",
+      "sourceRoot": "libs/types/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/types/tsconfig.lib.json",
+              "libs/types/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/types/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/types/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "services": {
+      "root": "libs/services",
+      "sourceRoot": "libs/services/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/services/tsconfig.lib.json",
+              "libs/services/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/services/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/services/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "config": {
+      "root": "libs/config",
+      "sourceRoot": "libs/config/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/config/tsconfig.lib.json",
+              "libs/config/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/config/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/config/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "api-client": {
+      "projectType": "library",
+      "root": "libs/api-client",
+      "sourceRoot": "libs/api-client/src",
+      "prefix": "dash",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api-client/tsconfig.lib.json",
+              "libs/api-client/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-client/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api-client/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "dealer-portal": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/dealer-portal",
+      "sourceRoot": "apps/dealer-portal/src",
+      "prefix": "dash",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "extraWebpackConfig": "webpack.config.js",
+            "outputPath": "dist/apps/dealer-portal",
+            "index": "apps/dealer-portal/src/index.html",
+            "main": "apps/dealer-portal/src/main.ts",
+            "polyfills": "apps/dealer-portal/src/polyfills.ts",
+            "tsConfig": "apps/dealer-portal/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/dealer-portal/src/favicon.ico",
+              "apps/dealer-portal/src/assets"
+            ],
+            "styles": [
+              "apps/dealer-portal/src/styles.scss",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/dealer-portal/src/environments/environment.ts",
+                  "with": "apps/dealer-portal/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "extraWebpackConfig": "webpack.config.js",
+            "browserTarget": "dealer-portal:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "dealer-portal:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "dealer-portal:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dealer-portal/tsconfig.app.json",
+              "apps/dealer-portal/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dealer-portal/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/dealer-portal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "dealer-portal-e2e": {
+      "root": "apps/dealer-portal-e2e",
+      "sourceRoot": "apps/dealer-portal-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/dealer-portal-e2e/cypress.json",
+            "tsConfig": "apps/dealer-portal-e2e/tsconfig.e2e.json",
+            "devServerTarget": "dealer-portal:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "dealer-portal:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/dealer-portal-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dealer-portal-e2e/**/*"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "dealer-sass"
+}

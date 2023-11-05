@@ -1,0 +1,34 @@
+<div nz-row nzAlign="middle">
+  <div nz-col nzXs="4" nzSm="4" nzMd="4" nzLg="2" nzXl="2">
+    <a nz-button nzType="link">
+      <svg-icon src="/assets/brand-logo.svg"></svg-icon>
+    </a>
+  </div>
+
+  <div
+    nz-col
+    [nzXs]="{ span: 14, offset: 5 }"
+    [nzSm]="{ span: 14, offset: 5 }"
+    [nzMd]="{ span: 14, offset: 5 }"
+    [nzLg]="{ span: 2, offset: 2 }"
+    [nzXl]="{ span: 3, offset: 1 }"
+  >
+    <button
+      nz-button
+      nzType="default"
+      class="all-inventory-btn"
+      [routerLink]="['/searching']"
+    >
+      <i nz-icon nzType="left"></i><span class="ml-2">All Inventory</span>
+    </button>
+  </div>
+
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="18" nzXl="18" class="car-txt">
+    <p class="model-txt">{{ modelName }}</p>
+    <!-- <p class="title-txt">LONG RANGE PLUS</p>
+      <p class="serial-txt"><b>VIN</b> SALWR2RE5KA853803</p> -->
+    <p class="serial-txt">
+      <b>MODEL</b> {{ modelCode }}&nbsp;&nbsp;&nbsp;&nbsp; <b>STOCK</b> N7754A
+    </p>
+  </div>
+</div>

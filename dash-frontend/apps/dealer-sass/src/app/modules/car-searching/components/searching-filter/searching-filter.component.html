@@ -1,0 +1,93 @@
+<div class="searching-filter-content">
+  <nz-collapse nzAccordion nzExpandIconPosition="right" >
+    <nz-collapse-panel [nzHeader]="panelTitle" [nzActive]="panels?.price" (nzActiveChange)="closeFilter('price', $event)">
+      <dash-select-price-range [defaultPrice]="formFilter?.get('price')?.value" [showFooter]="false" (onPriceChange)="onPriceFilterChange($event)"></dash-select-price-range>
+    </nz-collapse-panel>
+    <hr>
+    <nz-collapse-panel [nzHeader]="panelMake" [nzActive]="panels?.branch" (nzActiveChange)="closeFilter('branch', $event)">
+      <div class="list-make-car">
+        <div class="list-make-car-item" [ngClass]="{'active': !formFilter?.get('branch')?.value }" (click)="onFilterSelected('branch', null)">
+          All ({{ (filterData?.branch | async)?.length }} cars)
+        </div>
+        <div class="list-make-car-item" [ngClass]="{'active': formFilter?.get('branch')?.value?.value  === brand?.id}" *ngFor="let brand of (filterData?.branch | async)" (click)="onFilterSelected('branch', brand)">{{ brand?.name }}</div>
+      </div>
+    </nz-collapse-panel>
+    <hr>
+    <nz-collapse-panel [nzHeader]="panelModel" [nzActive]="panels?.model" (nzActiveChange)="closeFilter('model', $event)">
+      <div class="list-make-car">
+        <div class="list-make-car-item" [ngClass]="{'active': !formFilter?.get('model')?.value }" (click)="onFilterSelected('model', '')">
+          All ({{ (filterData?.model | async)?.length }} cars)
+        </div>
+        <div class="list-make-car-item" [ngClass]="{'active': formFilter?.get('model')?.value?.value  === model?.id}" *ngFor="let model of (filterData?.model | async)" (click)="onFilterSelected('model', model)">{{ model?.name }}</div>
+      </div>
+    </nz-collapse-panel>
+    <hr>
+    <nz-collapse-panel [nzHeader]="panelYear" [nzActive]="panels?.year" (nzActiveChange)="closeFilter('year', $event)">
+      <div class="list-make-car">
+        <div class="list-make-car-item" [ngClass]="{'active': !formFilter?.get('year')?.value }" (click)="onFilterSelected('year', '')">
+          All ({{ (filterData?.year | async)?.length }} cars)
+        </div>
+        <div class="list-make-car-item" [ngClass]="{'active': formFilter?.get('year')?.value?.value  === year?.id}" *ngFor="let year of (filterData?.year | async)" (click)="onFilterSelected('year', year)">{{ year?.name }}</div>
+      </div>
+    </nz-collapse-panel>
+    <hr>
+    <nz-collapse-panel [nzHeader]="panelBodyType" [nzActive]="panels?.body" (nzActiveChange)="closeFilter('body', $event)">
+      <div class="list-make-car">
+        <div class="list-make-car-item" [ngClass]="{'active': !formFilter?.get('body')?.value }" (click)="onFilterSelected('body', '')">
+          All ({{ (filterData?.body | async)?.length }} cars)
+        </div>
+        <div class="list-make-car-item" [ngClass]="{'active': formFilter?.get('body')?.value?.value  === body?.id}" *ngFor="let body of (filterData?.body | async)" (click)="onFilterSelected('body', body)">{{ body?.name }}</div>
+      </div>
+    </nz-collapse-panel>
+    <hr>
+    <nz-collapse-panel [nzHeader]="panelColor" [nzActive]="panels?.color" (nzActiveChange)="closeFilter('color', $event)">
+      <div class="list-make-car">
+        <div class="list-make-car-item" [ngClass]="{'active': !formFilter?.get('color')?.value }" (click)="onFilterSelected('color', '')">
+          All ({{ (filterData?.color | async)?.length }} cars)
+        </div>
+        <div class="list-make-car-item" [ngClass]="{'active': formFilter?.get('color')?.value?.value  === color?.id}" *ngFor="let color of (filterData?.color | async)" (click)="onFilterSelected('color', color)">{{ color?.description }}</div>
+      </div>
+    </nz-collapse-panel>
+    <hr>
+  </nz-collapse>
+  <ng-template #panelTitle>
+    <div class="filter-header flex justify-between items-center">
+      <div class="filter-header-title">Price range</div>
+      <div class="filter-header-mark">{{ formFilter?.get('price')?.value ? formFilter?.get('price')?.value.text : '' }}</div>
+    </div>
+  </ng-template>
+  <ng-template #panelModel>
+    <div class="filter-header flex justify-between items-center">
+      <div class="filter-header-title">Model</div>
+      <div class="filter-header-mark">{{ formFilter?.get('model')?.value ? formFilter?.get('model')?.value.text : 'All' }}</div>
+    </div>
+  </ng-template>
+  <ng-template #panelYear>
+    <div class="filter-header flex justify-between items-center">
+      <div class="filter-header-title">Year</div>
+      <div class="filter-header-mark">{{ formFilter?.get('year')?.value ? formFilter?.get('year')?.value.text : 'All' }}</div>
+    </div>
+  </ng-template>
+  <ng-template #panelBodyType>
+    <div class="filter-header flex justify-between items-center">
+      <div class="filter-header-title">Body type</div>
+      <div class="filter-header-mark">{{ formFilter?.get('body')?.value ? formFilter?.get('body')?.value.text : 'All' }}</div>
+    </div>
+  </ng-template>
+  <ng-template #panelColor>
+    <div class="filter-header flex justify-between items-center">
+      <div class="filter-header-title">Color</div>
+      <div class="filter-header-mark">{{ formFilter?.get('color')?.value ? formFilter?.get('color')?.value.text : 'All' }}</div>
+    </div>
+  </ng-template>
+  <ng-template #panelMake>
+    <div class="filter-header flex justify-between items-center">
+      <div class="filter-header-title">Make</div>
+      <div class="filter-header-mark">{{ formFilter?.get('branch')?.value ? formFilter?.get('branch')?.value.text : 'All' }}</div>
+    </div>
+  </ng-template>
+</div>
+<div class="searching-filter-footer flex justify-end">
+  <button class="btn" type="button" (click)="onResetFilter()">Reset</button>
+  <button class="btn btn-primary" type="button" class="submit" (click)="onSubmitFilter()">Save</button>
+</div>

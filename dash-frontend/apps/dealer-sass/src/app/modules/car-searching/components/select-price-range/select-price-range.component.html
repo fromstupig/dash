@@ -1,0 +1,14 @@
+<div class="searching-modal-content">
+  <div class="grid grid-cols-2">
+    <div class="flex items-center justify-between">
+      <div class="searching-modal-content-slider-price font-bold">$0</div>
+      <div class="searching-modal-content-slider-price font-bold">$20000</div>
+    </div>
+  </div>
+  <div class="grid grid-cols-2">
+    <nz-slider [(ngModel)]="price" (nzOnAfterChange)="afterChange()" nzRange [nzMax]="20000" [nzStep]="1000" class="searching-modal-content-slider"></nz-slider>
+  </div>
+</div>
+<div class="searching-modal-footer" *ngIf="showFooter">
+  <button nz-button nzType="primary" class="font-bold searching-modal-submit" (click)="onFilter()">Save</button>
+</div>

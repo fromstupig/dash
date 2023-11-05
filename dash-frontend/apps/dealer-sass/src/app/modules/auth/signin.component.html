@@ -1,0 +1,42 @@
+<nz-layout class="bg-transparent">
+  <div class="text-center bg-transparent my-5">
+    <p class="font-bold text-lg my-2">Login</p>
+  </div>
+  <nz-content class="bg-transparent">
+    <form nz-form [formGroup]="formGroup" class="ant-advanced-search-form">
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="24">
+          <nz-form-item>
+            <nz-form-control>
+              <input class="rounded-lg" nz-input placeholder="Email" formControlName="email" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="24">
+          <nz-form-item>
+            <nz-form-control>
+              <input class="rounded-lg" nz-input placeholder="Password" formControlName="password" type="password" />
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <div nz-row [nzGutter]="24">
+        <div nz-col [nzSpan]="24">
+          <button nz-button nzType="primary" nzShape="round" nzSize="large"
+                  class="w-full" (click)="onSubmit()">Login
+          </button>
+        </div>
+      </div>
+    </form>
+  </nz-content>
+  <nz-footer class="text-center bg-transparent">
+    <p>Don't have an account? <a (click)="onRedirectSignup()" class="underline font-bold">Sign up</a></p>
+    <p class="text-xs disclaimer my-2">By connecting, you agree to our <a href="#" class="underline">General Terms &
+      Conditions</a>
+      and <a href="#" class="underline">Privacy Policy</a></p>
+  </nz-footer>
+</nz-layout>

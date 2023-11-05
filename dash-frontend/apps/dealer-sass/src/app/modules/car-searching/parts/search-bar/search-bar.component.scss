@@ -1,0 +1,218 @@
+@import "../../../../../assets/scss/_variables.scss";
+.search-bar {
+  margin-top: 0;
+  @media screen and (min-width: 992px) {
+    margin-top: 10px;
+  }
+  &-container {
+    padding: 10px 15px;
+    &.border-bot {
+      border-bottom: 1px solid #F2F3F4;
+    }
+    @media screen and (min-width: 992px) {
+      border-radius: 10px;
+    }
+  }
+  i {
+    color: $color_white;
+  }
+  &-left {
+    margin-bottom: 12px;
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 0;
+    }
+    i {
+      font-size: 8px;
+      padding-top: 3px;
+      @media screen and (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+    &-select {
+      background: $color_blue;
+      border-radius: 10px;
+      padding: 11px 37px;
+      color: $color_white;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &-filter {
+      &-item {
+        padding: 10px 20px;
+        cursor: pointer;
+        &-title {
+          &-text {
+            font-size: 14px;
+            line-height: 19px;
+            color: $color_white;
+          }
+        }
+      }
+      &-tick {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        color: #010101;
+        padding-left: 5px;
+        &-text {
+          padding: 7px 7px 7px 10px;
+        }
+        i {
+          color: #010101;
+          font-size: 11px;
+        }
+      }
+      &-separate {
+        padding: 0 .5px;
+        background: #fff;
+        height: 21px;
+        margin: 0 3px;
+      }
+    }
+  }
+  &-right {
+    color: $color_white;
+    &.color-text-black {
+      color: #22313F;
+      i {
+        color: #22313F;
+      }
+    }
+    i {
+      font-size: 11px;
+      padding-top: 3px;
+    }
+    &-container {
+      &-result {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+.select-car-item {
+  font-size: 15px;
+  font-weight: 500;
+  &:hover {
+    background: $color_blue;
+    color: $color_white;
+  }
+}
+::ng-deep {
+  .searching-modal {
+    &-title {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    &-content {
+      column-gap: 10px;
+      row-gap: 10px;
+      padding-left: 24px;
+      padding-right: 24px;
+      height: 355px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      grid-auto-rows: minmax(min-content, max-content);
+      @media screen and (max-width: 768px) {
+        height: unset;
+      }
+      @media screen and (max-width: 440px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      &-item {
+        padding: 10px 5px;
+        border: 1px solid $color_white_gray;
+        box-sizing: border-box;
+        border-radius: 5px;
+        height: 42px;
+        color: $color_semi_black;
+        &.active {
+          border-color: $color_blue;
+        }
+        &-logo {
+          padding-right: 5px;
+          max-width: 40px;
+        }
+        &-name {
+          font-size: 12px;
+          line-height: 16px;
+          min-width: 85px;
+        }
+        &-text {
+          &-name {
+            line-height: 16px;
+            font-size: 13px;
+          }
+          &-box {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+        &-color {
+          &-round {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      &-slider {
+        border-left: 2px solid $color_black_gray;
+        border-right: 2px solid $color_black_gray;
+        margin-bottom: 3px;
+        &-price {
+          font-size: 16px;
+          line-height: 22px;
+          &:first-child {
+            transform: translateX(-50%);
+          }
+          &:last-child {
+            transform: translateX(50%);
+          }
+        }
+      }
+    }
+    &-submit {
+      font-size: 16px;
+      line-height: 22px;
+      background: $color_blue;
+      border-radius: 10px;
+      color: $color_white;
+      padding: 9px 47px;
+    }
+    &-footer {
+      padding: 10px 16px;
+      text-align: right;
+      background: 0 0;
+      border-top: 1px solid $color_white_gray;
+    }
+  }
+}
+::ng-deep {
+  .ant-slider-handle {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+  }
+  .ant-slider-rail {
+    height: 6px;
+    background: $color_white_gray;
+  }
+  .ant-slider-track {
+    height: 6px;
+    background: $color_blue_secondary
+  }
+  .ant-slider {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 4px;
+    margin-bottom: 7px;
+  }
+  .vertical-center-modal .modal-rounded .ant-modal-body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}

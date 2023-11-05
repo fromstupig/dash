@@ -1,0 +1,16 @@
+<nz-layout>
+  <nz-header
+    id="header"
+    class="bg-white fixed"
+    [ngClass]="{'lg:container on-top': isOnTop}"
+  >
+    <div [ngClass]="{'container header-container': !isOnTop}">
+      <dash-layout-header></dash-layout-header>
+    </div>
+  </nz-header>
+  <nz-content class="min-h-screen">
+    <router-outlet></router-outlet>
+  </nz-content>
+
+  <dash-main-footer></dash-main-footer>
+</nz-layout>

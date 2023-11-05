@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  dash-dev-db:
+    image: "postgres:10.13"
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: dash-local
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+  dash-es:
+    image: "docker.elastic.co/elasticsearch/elasticsearch:6.6.0"
+    ports:
+      - 9200:9200
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+volumes:
+  dbdata:
+  esdata:

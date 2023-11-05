@@ -1,0 +1,36 @@
+@import '../assets/scss/_variables.scss';
+
+nz-content {
+  background: $color_white;
+}
+.ant-layout {
+  &-header {
+    height: auto;
+    line-height: 1;
+    &.fixed {
+      border-bottom: 1px solid #cecece;
+    }
+    @media screen and (max-width: 991px) {
+      padding: 0 20px;
+    }
+  }
+  &-content {
+    @media screen and (max-width: 991px) {
+      padding-top: 60px;
+    }
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.header-container {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
